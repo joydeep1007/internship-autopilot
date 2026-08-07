@@ -1,0 +1,22 @@
+# Environment files — NEVER commit these
+frontend/.env
+frontend/.env.local
+scraper/.env
+
+# Python
+__pycache__/
+*.py[cod]
+scraper/venv/
+scraper/.venv/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Scraper state (committed by GitHub Actions bot, not manually)
+# scraper/.seen_ids.json  ← keep this commented so Actions can push it

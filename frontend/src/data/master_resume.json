@@ -1,0 +1,166 @@
+{
+  "personal": {
+    "name": "Joydeep De",
+    "email": "joydeep102004@gmail.com",
+    "github": "github.com/joydeep1007",
+    "location": "Kolkata, India",
+    "phone": "+91 9163805618"
+  },
+
+  "education": [
+    {
+      "institution": "University of Engineering and Management",
+      "degree": "Bachelor of Technology in Computer Science \\& Engineering",
+      "duration": "Aug 2022 -- Present",
+      "cgpa": "8.11"
+    }
+  ],
+
+  "summaries": {
+    "mern": "Full-stack developer with hands-on experience building production-grade web applications using React, Node.js, Express, and MongoDB. Projects span real-time WebSocket systems, AI-integrated pipelines, and microservice architectures.",
+    "swe": "Software developer with a strong foundation in system design, algorithmic problem solving, and modular architecture. Built production-grade systems spanning real-time data pipelines, AI backends, and trading infrastructure.",
+    "python": "Python developer with experience building automation pipelines, algorithmic systems, and AI-integrated backends. Strong in data processing, API integration, and performance optimization.",
+    "aiml": "ML engineer with hands-on experience building end-to-end AI pipelines, computer vision systems, and multimodal AI integrations. Strong in model optimization, inference performance, and production AI deployment.",
+    "devops": "Developer with hands-on experience building and deploying full-stack systems on cloud infrastructure. Proficient in CI/CD pipelines, containerization with Docker, and multi-service deployments on Vercel and Render.",
+    "other": "Computer science student with strong fundamentals in algorithms, system design, and full-stack development. Built production-grade projects spanning trading systems, AI pipelines, and real-time web applications."
+  },
+
+  "skills": {
+    "languages": ["Python", "JavaScript", "TypeScript", "Java", "C"],
+    "frontend": ["React.js", "Zustand", "Socket.io-client", "Tailwind CSS"],
+    "backend": ["Node.js", "Express.js", "FastAPI", "REST API design"],
+    "databases": ["MongoDB", "PostgreSQL", "SQL"],
+    "devops": ["Git", "GitHub Actions", "Vercel", "Render", "Docker"],
+    "ai_ml": ["Gemini API", "Groq", "OpenAI", "OpenCV", "CNN"],
+    "cs_fundamentals": ["Data structures", "Algorithms", "OOP", "Design patterns", "System design"]
+  },
+
+  "projects": [
+    {
+      "id": "trading_engine",
+      "name": "Algorithmic Trading Engine",
+      "tech": ["Python", "FastAPI", "Binance API"],
+      "role_relevance": ["swe", "python", "backend"],
+      "github": "https://github.com/joydeep1007/Joydeep-binance-bot",
+      "bullets": {
+        "swe": [
+          "Designed a pluggable strategy system using the Strategy design pattern — new algorithms drop in without modifying the execution layer",
+          "Built a Risk Manager enforcing hard constraints: position sizing, daily loss limits, max concurrent positions — every order passes through it before execution",
+          "Engineered a backtesting engine on historical Binance data computing Sharpe ratio, max drawdown, win rate — no external backtesting library used",
+          "Implemented Telegram alerting on order execution and risk limit breaches; Rich terminal dashboard with live P\\&L"
+        ],
+        "python": [
+          "Built automated trading bot in Python supporting Market, Limit, Stop-Limit, OCO, and TWAP order execution on Binance Testnet",
+          "Wrapped core trading logic in FastAPI microservice — exposes clean REST endpoints with Pydantic request validation",
+          "Implemented TWAP execution algorithm: splits large orders into time-distributed chunks to minimize market impact",
+          "Added robust exception handling, structured logging, and CLI interface for stable automated operation"
+        ]
+      }
+    },
+    {
+      "id": "mern_platform",
+      "name": "Trading Platform — Full Stack",
+      "tech": ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "FastAPI"],
+      "role_relevance": ["mern", "swe", "backend"],
+      "github": "https://github.com/joydeep1007/Joydeep-binance-bot",
+      "bullets": {
+        "mern": [
+          "React dashboard with live candlestick charts consuming Binance WebSocket stream via Socket.io",
+          "Node/Express API orchestrating Python FastAPI microservice for order execution — clean service separation",
+          "MongoDB Atlas for trade history with JWT authentication and protected API routes",
+          "CI/CD via GitHub Actions: tests run on every push, deploy proceeds only on green build"
+        ],
+        "swe": [
+          "Separated Python trading logic into a FastAPI microservice — Node.js orchestrates via HTTP, keeping language concerns isolated",
+          "Built real-time price feed: Node.js consumes Binance WebSocket, transforms kline data, rebroadcasts via Socket.io as fan-out relay",
+          "Designed MongoDB schema with compound indexes on (userId, createdAt) for efficient paginated trade history queries",
+          "Three independently deployable services: React on Vercel, Node API on Render, Python bot on Render"
+        ]
+      }
+    },
+    {
+      "id": "city_lens",
+      "name": "City Lens — AI Photo Tourism Platform",
+      "tech": ["TypeScript", "React", "Express", "Gemini API", "Groq", "Supabase"],
+      "role_relevance": ["mern", "swe", "aiml", "python"],
+      "github": "https://github.com/joydeep1007/city-lens-photo-tourism",
+      "bullets": {
+        "mern": [
+          "TypeScript React + Vite frontend with Express backend — full type safety across the stack",
+          "4-step AI pipeline: vision → search grounding → script generation → TTS, exposed as REST API",
+          "Supabase auth and Tourist Passport feature — users collect and revisit identified landmarks",
+          "SSE streaming so frontend receives results progressively as each pipeline stage completes"
+        ],
+        "swe": [
+          "Architected a 4-stage processing pipeline where each stage is independently testable and replaceable",
+          "Multi-model fallback system: every stage cascades through Gemini variants before falling back to Groq — degrades gracefully rather than failing hard",
+          "Enforced structured JSON schema on LLM output using Gemini responseSchema — eliminates unparseable responses in production",
+          "SSE streaming reduces perceived latency from ~12s to ~3s for first meaningful output"
+        ],
+        "aiml": [
+          "Built end-to-end multimodal AI pipeline: Gemini vision identification → live search grounding → character-based narration → TTS synthesis",
+          "Designed cascading fallback system across Gemini model variants and Groq — handles API failures without user-visible errors",
+          "Used Gemini responseSchema for structured JSON enforcement on LLM output — production-grade output validation",
+          "Progressive SSE streaming delivers pipeline results as they arrive — each AI stage outputs independently"
+        ]
+      }
+    },
+    {
+      "id": "drowsiness",
+      "name": "Drowsiness Detection System",
+      "tech": ["Python", "OpenCV", "dlib"],
+      "role_relevance": ["aiml", "python", "swe"],
+      "bullets": {
+        "aiml": [
+          "Implemented facial landmark detection using dlib 68-point model, computing Eye Aspect Ratio for blink pattern classification",
+          "Optimized inference pipeline via grayscale conversion and resolution scaling — reduced per-frame compute by ~40\\%",
+          "Designed configurable EAR threshold system to reduce false positives across varying lighting conditions"
+        ],
+        "python": [
+          "Real-time computer vision pipeline using OpenCV and dlib facial landmark tracking",
+          "Optimized inference pipeline for low-latency performance — frame preprocessing reduces computation before landmark detection",
+          "Audio-visual alert system with configurable sensitivity thresholds"
+        ]
+      }
+    },
+    {
+      "id": "nn_scratch",
+      "name": "Neural Network from Scratch",
+      "tech": ["Python", "NumPy"],
+      "role_relevance": ["aiml", "python", "swe"],
+      "bullets": {
+        "aiml": [
+          "Implemented full backpropagation from first principles in NumPy — no ML frameworks used",
+          "Supports configurable layer depths, ReLU/Sigmoid activations, He initialization, and momentum SGD",
+          "Achieved 97.2\\% accuracy on MNIST digit classification — benchmarked with loss curve visualization"
+        ],
+        "python": [
+          "Built a configurable feedforward neural network in pure NumPy with backpropagation, He init, and momentum SGD",
+          "Trained on MNIST digits dataset achieving 97.2\\% accuracy — no ML frameworks, only NumPy",
+          "GitHub Actions CI runs test suite on every push — green badge confirms correctness"
+        ]
+      }
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Green Skills and AI Intern",
+      "company": "Edunet Foundation X AICTE \\& Shell",
+      "duration": "Jul 2025 -- Aug 2025",
+      "location": "Kolkata, India",
+      "bullets": [
+        "Built a predictive sustainability model using Python and scikit-learn — processed and engineered features from real environmental datasets",
+        "Delivered weekly milestone demos, integrated feedback across 4-week agile sprint cycle",
+        "Collaborated with cross-functional team to document model performance and present findings to stakeholders"
+      ]
+    }
+  ],
+
+  "certifications": [
+    "Introduction to Data Science -- Infosys Springboard (June 2025)",
+    "Introduction to Deep Learning -- Infosys Springboard (June 2025)",
+    "Getting Started with AI -- IBM SkillsBuild (July 2025)",
+    "Google Cloud Essentials -- Google Cloud Skills Boost (July 2025)"
+  ]
+}
