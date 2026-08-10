@@ -207,6 +207,57 @@ app.put('/api/resume', async (req, res) => {
   }
 });
 
+app.post('/api/draft-email', async (req, res) => {
+  try {
+    const { job, masterResume } = req.body;
+
+    if (!job || !masterResume) {
+      return res.status(400).json({ error: 'Missing job or masterResume' });
+    }
+
+    const topProject = masterResume.projects[0];
+    const prompt = `
+Write a cold internship outreach email. Under 120 words. No fluff. No "Dear Sir/Madam".
+
+SENDER:
+Name: ${masterResume.personal.name}
+Best project: ${topProject.name} — github.com/joydeep1007 (live projects, real code)
+Skills: React, Node.js, Python, FastAPI, Gemini API, MongoDB
+Currently: B.Tech CSE final year, CGPA 8.11
+
+TARGET:
+Company: ${job.company}
+Role: ${job.title}
+Key skills they want: ${(job.key_skills || []).join(", ")}
+${job.description ? `What they do (from JD): ${job.description.slice(0, 200)}` : ""}
+${job.contact_email ? `Recipient email: ${job.contact_email}` : ""}
+
+FORMAT — return ONLY this, no explanation:
+Subject: [subject line]
+
+[email body — 3-4 short paragraphs, ends with a direct question like "Would a 15-minute call work this week?"]
+
+RULES:
+- Reference ONE specific thing about their product or the role
+- Mention the GitHub link naturally
+- First name only (no "Dear Hiring Manager")
+- Never say "I am writing to express my interest"
+- The "trial project" close: if appropriate, offer to do a small task to show fit
+`;
+
+    const message = await anthropic.messages.create({
+      model: "claude-3-5-haiku-20241022",
+      max_tokens: 500,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    res.json({ result: message.content[0].text });
+  } catch (error) {
+    console.error('Error calling Anthropic API:', error);
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Backend proxy listening on port ${port}`);
 });
