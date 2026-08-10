@@ -2,8 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import Anthropic from '@anthropic-ai/sdk';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const resumePath = path.join(__dirname, '../frontend/src/data/master_resume.json');
 
 const app = express();
 const port = 3001;
@@ -171,6 +178,32 @@ Return ONLY the complete LaTeX document starting with %%META. No explanation. No
   } catch (error) {
     console.error('Error calling Anthropic API:', error);
     res.status(500).json({ error: error.message || 'Internal Server Error' });
+  }
+});
+
+app.get('/api/resume', async (req, res) => {
+  try {
+    const data = await fs.readFile(resumePath, 'utf8');
+    res.json(JSON.parse(data));
+  } catch (error) {
+    console.error('Error reading resume:', error);
+    res.status(500).json({ error: 'Failed to read resume' });
+  }
+});
+
+app.put('/api/resume', async (req, res) => {
+  try {
+    const resumeData = req.body;
+    if (typeof resumeData !== 'object' || !resumeData) {
+       return res.status(400).json({ error: 'Invalid resume data format' });
+    }
+    
+    // Save the resume
+    await fs.writeFile(resumePath, JSON.stringify(resumeData, null, 2), 'utf8');
+    res.json({ success: true, message: 'Resume saved successfully' });
+  } catch (error) {
+    console.error('Error writing resume:', error);
+    res.status(500).json({ error: 'Failed to write resume schema' });
   }
 });
 

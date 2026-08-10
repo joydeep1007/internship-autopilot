@@ -3,13 +3,14 @@ import JobList from "./components/JobList";
 import JobDetail from "./components/JobDetail";
 import ResumeTailor from "./components/ResumeTailor";
 import Header from "./components/Header";
+import ResumeEditor from "./components/ResumeEditor";
 import jobs_data from "./data/jobs.json";
-import masterResume from "./data/master_resume.json";
 
 export default function App() {
-  const [view, setView]           = useState("jobs");      // jobs | detail | tailor
+  const [view, setView]           = useState("jobs");      // jobs | detail | tailor | resume
   const [selectedJob, setSelectedJob] = useState(null);
   const [jobs, setJobs]           = useState([]);
+  const [masterResume, setMasterResume] = useState(null);
   const [filter, setFilter]       = useState("all");       // all | mern | swe | python | aiml | devops
   const [statusFilter, setStatusFilter] = useState("all"); // all | new | applied
   const [sortBy, setSortBy]       = useState("score");     // score | date
@@ -18,6 +19,12 @@ export default function App() {
     // Load jobs from the JSON file the scraper writes
     // In dev: data is static. In prod with GitHub Pages: refreshes daily via Actions.
     setJobs(jobs_data);
+    
+    // Fetch latest master resume from API
+    fetch("http://localhost:3001/api/resume")
+      .then(res => res.json())
+      .then(data => setMasterResume(data))
+      .catch(err => console.error("Failed to fetch resume:", err));
   }, []);
 
   const filteredJobs = jobs
@@ -53,6 +60,7 @@ export default function App() {
         onBack={() => setView(view === "tailor" ? "detail" : "jobs")}
         totalJobs={jobs.length}
         newJobs={jobs.filter(j => !j.applied).length}
+        onOpenResumeEditor={() => setView("resume")}
       />
 
       {view === "jobs" && (
@@ -69,7 +77,7 @@ export default function App() {
         />
       )}
 
-      {view === "detail" && selectedJob && (
+      {view === "detail" && selectedJob && masterResume && (
         <JobDetail
           job={selectedJob}
           masterResume={masterResume}
@@ -79,12 +87,19 @@ export default function App() {
         />
       )}
 
-      {view === "tailor" && selectedJob && (
+      {view === "tailor" && selectedJob && masterResume && (
         <ResumeTailor
           job={selectedJob}
           masterResume={masterResume}
           onBack={() => setView("detail")}
           onMarkApplied={() => { markApplied(selectedJob.id); setView("jobs"); }}
+        />
+      )}
+
+      {view === "resume" && (
+        <ResumeEditor
+          masterResume={masterResume}
+          onSaveSuccess={(newResume) => setMasterResume(newResume)}
         />
       )}
     </div>
