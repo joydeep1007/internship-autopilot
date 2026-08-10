@@ -17,8 +17,14 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+# pyrefly: ignore [missing-import]
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import requests
+
+# pyrefly: ignore [missing-import]
 import google.generativeai as genai
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -65,6 +71,7 @@ SEARCH_TERMS = [
 def scrape_jobs() -> list[dict[str, Any]]:
     """Use JobSpy to scrape multiple platforms simultaneously."""
     try:
+        # pyrefly: ignore [missing-import]
         from jobspy import scrape_jobs as jobspy_scrape
     except ImportError:
         print("Installing python-jobspy...")
