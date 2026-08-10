@@ -32,10 +32,10 @@ GEMINI_KEY = os.getenv("GEMINI_KEY")
 if GEMINI_KEY is None:
     raise RuntimeError("GEMINI_KEY environment variable is missing")
 
-APOLLO_KEY      = os.environ.get("APOLLO_KEY", "")
-HUNTER_KEY      = os.environ.get("HUNTER_KEY", "")
-TELEGRAM_TOKEN  = os.environ.get("TELEGRAM_TOKEN", "")
-TELEGRAM_CHAT   = os.environ.get("TELEGRAM_CHAT_ID", "")
+APOLLO_KEY      = os.getenv("APOLLO_KEY", "")
+HUNTER_KEY      = os.getenv("HUNTER_KEY", "")
+TELEGRAM_TOKEN  = os.getenv("TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT   = os.getenv("TELEGRAM_CHAT_ID", "")
 
 SCORE_THRESHOLD = 55           # Only keep jobs scoring ≥ this
 MAX_JOBS        = 60           # Max scrape per run
