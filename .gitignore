@@ -20,3 +20,4 @@ Thumbs.db
 
 # Scraper state (committed by GitHub Actions bot, not manually)
 # scraper/.seen_ids.json  ← keep this commented so Actions can push it
+node_modules/
