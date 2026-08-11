@@ -37,6 +37,7 @@ SNOV_CLIENT_ID  = os.getenv("SNOV_CLIENT_ID", "")
 SNOV_SECRET     = os.getenv("SNOV_SECRET", "")
 TELEGRAM_TOKEN  = os.getenv("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT   = os.getenv("TELEGRAM_CHAT_ID", "")
+PROXY_URL       = os.getenv("PROXY_URL", "")
 
 SCORE_THRESHOLD = 55           # Only keep jobs scoring ≥ this
 MAX_JOBS        = 60           # Max scrape per run
@@ -83,14 +84,18 @@ def scrape_jobs() -> list[dict[str, Any]]:
     all_jobs: list[Any] = []
     for term in SEARCH_TERMS:
         try:
-            df = jobspy_scrape(
-                site_name=["linkedin", "indeed", "glassdoor"],
-                search_term=term,
-                location="India",
-                results_wanted=20,
-                hours_old=24,
-                country_indeed="India",
-            )
+            scrape_args = {
+                "site_name": ["linkedin", "indeed", "glassdoor"],
+                "search_term": term,
+                "location": "India",
+                "results_wanted": 20,
+                "hours_old": 24,
+                "country_indeed": "India",
+            }
+            if PROXY_URL:
+                scrape_args["proxies"] = [PROXY_URL]
+
+            df = jobspy_scrape(**scrape_args)
             if df is not None and not df.empty:
                 all_jobs.append(df)
                 print(f"  ✓ '{term}': {len(df)} results")
@@ -142,24 +147,30 @@ Return ONLY valid JSON (no markdown, no explanation):
   "estimated_stipend": "<e.g. ₹15,000-25,000/month or Unknown>"
 }}
 """
-    try:
-        resp = model.generate_content(prompt)
-        text = resp.text.strip().replace("```json", "").replace("```", "")
-        parsed: dict[str, Any] = json.loads(text)
-        parsed["title"]   = title
-        parsed["company"] = company
-        parsed["site"]    = str(job.get("site", ""))
-        parsed["job_url"] = str(job.get("job_url", ""))
-        parsed["description"] = desc
-        parsed["date_posted"] = str(job.get("date_posted", ""))
-        parsed["id"]      = str(job.get("id", f"{company}-{title}"))
-        return parsed
-    except Exception as e:
-        print(f"    Score parse error for {title}: {e}")
-        return None
+    for attempt in range(3):
+        try:
+            resp = model.generate_content(prompt)
+            text = resp.text.strip().replace("```json", "").replace("```", "")
+            parsed: dict[str, Any] = json.loads(text)
+            parsed["title"]   = title
+            parsed["company"] = company
+            parsed["site"]    = str(job.get("site", ""))
+            parsed["job_url"] = str(job.get("job_url", ""))
+            parsed["description"] = desc
+            parsed["date_posted"] = str(job.get("date_posted", ""))
+            parsed["id"]      = str(job.get("id", f"{company}-{title}"))
+            return parsed
+        except Exception as e:
+            if "429" in str(e) or "quota" in str(e).lower():
+                print(f"    Rate limit hit for {title}. Waiting 30s...")
+                time.sleep(30)
+            else:
+                print(f"    Score parse error for {title}: {e}")
+                return None
+    return None
 
 # ── Step 3: Find email ─────────────────────────────────────────────────────
-def find_email(company: str) -> str:
+def find_email(company: str, snov_token: str = "") -> str:
     """Hunter primary (50/month, real API) → Snov.io fallback (150/month, real API)."""
 
     # Derive a likely domain slug from company name
@@ -205,27 +216,13 @@ def find_email(company: str) -> str:
             print(f"    Hunter error for {company}: {e}")
 
     # ── 2. Snov.io — fallback (150 free searches/month, full API access) ──
-    if SNOV_CLIENT_ID and SNOV_SECRET:
+    if snov_token:
         try:
-            # Step 1: get access token
-            token_r = requests.post(
-                "https://api.snov.io/v1/oauth/access_token",
-                json={
-                    "grant_type": "client_credentials",
-                    "client_id": SNOV_CLIENT_ID,
-                    "client_secret": SNOV_SECRET,
-                },
-                timeout=10,
-            )
-            token = token_r.json().get("access_token", "")
-            if not token:
-                raise ValueError("No token returned")
-
-            # Step 2: domain email search
+            # Domain email search using passed token
             r = requests.post(
                 "https://api.snov.io/v2/domain-emails-with-info",
                 json={
-                    "access_token": token,
+                    "access_token": snov_token,
                     "domain": slug,
                     "type": "all",
                     "limit": 5,
@@ -312,14 +309,28 @@ def main() -> None:
             print(f"    → score {result['score']} ✓")
         else:
             print(f"    → score {result.get('score','?') if result else '?'} (skipped)")
-        time.sleep(0.5)   # stay within free tier limits
+        time.sleep(4.5)   # stay within free tier limits
 
     print(f"\n→ {len(scored)} listings above threshold ({SCORE_THRESHOLD})")
 
     # Find emails
     print("\n[3/4] Finding hiring manager emails...")
+    
+    # Fetch Snov.io token ONCE
+    global_snov_token = ""
+    if SNOV_CLIENT_ID and SNOV_SECRET:
+        try:
+            token_r = requests.post(
+                "https://api.snov.io/v1/oauth/access_token",
+                json={"grant_type": "client_credentials", "client_id": SNOV_CLIENT_ID, "client_secret": SNOV_SECRET},
+                timeout=10
+            )
+            global_snov_token = token_r.json().get("access_token", "")
+        except Exception as e:
+            print(f"    Failed to fetch Snov.io token: {e}")
+
     for job in scored:
-        email: str = find_email(str(job["company"]))
+        email: str = find_email(str(job["company"]), snov_token=global_snov_token)
         job["contact_email"] = email
         job["email_status"]  = "found" if email else "not_found"
         job["scraped_at"]    = datetime.now(timezone.utc).isoformat()
