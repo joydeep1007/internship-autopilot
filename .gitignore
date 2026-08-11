@@ -2,6 +2,7 @@
 frontend/.env
 frontend/.env.local
 scraper/.env
+backend/.env
 
 # Python
 __pycache__/
