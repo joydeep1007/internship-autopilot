@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import Anthropic from '@anthropic-ai/sdk';
+import Groq from 'groq-sdk';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -21,8 +21,8 @@ app.use(cors({ origin: 'http://localhost:5173' }));
 // Parse JSON bodies (increased limit for large resumes)
 app.use(express.json({ limit: '10mb' }));
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_KEY,
+const groq = new Groq({
+  apiKey: process.env.GROQ_KEY,
 });
 
 app.post('/api/tailor-resume', async (req, res) => {
@@ -168,16 +168,21 @@ For CERTIFICATIONS_BLOCK join certs with \\\\\\\\ between each.
 Return ONLY the complete LaTeX document starting with %%META. No explanation. No markdown fences.
 `;
 
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1024,
+    const message = await groq.chat.completions.create({
+      model: "llama-3.3-70b-versatile",
+      max_tokens: 4000,
+      temperature: 0.3,
       messages: [{ role: "user", content: prompt }],
     });
 
-    res.json({ result: message.content[0].text });
+    res.json({ result: message.choices[0].message.content });
   } catch (error) {
-    console.error('Error calling Anthropic API:', error);
-    res.status(500).json({ error: error.message || 'Internal Server Error' });
+    console.error('Error calling Groq API (tailor-resume):', error);
+    const status = error?.status === 429 ? 429 : 500;
+    const msg = error?.status === 429
+      ? 'Groq rate limit hit — wait 60 seconds and try again (free tier limit)'
+      : error.message || 'Internal Server Error';
+    res.status(status).json({ error: msg });
   }
 });
 
@@ -245,16 +250,21 @@ RULES:
 - The "trial project" close: if appropriate, offer to do a small task to show fit
 `;
 
-    const message = await anthropic.messages.create({
-      model: "claude-3-5-haiku-20241022",
+    const message = await groq.chat.completions.create({
+      model: "llama-3.1-8b-instant",
       max_tokens: 500,
+      temperature: 0.7,
       messages: [{ role: "user", content: prompt }],
     });
 
-    res.json({ result: message.content[0].text });
+    res.json({ result: message.choices[0].message.content });
   } catch (error) {
-    console.error('Error calling Anthropic API:', error);
-    res.status(500).json({ error: error.message || 'Internal Server Error' });
+    console.error('Error calling Groq API (draft-email):', error);
+    const status = error?.status === 429 ? 429 : 500;
+    const msg = error?.status === 429
+      ? 'Groq rate limit hit — wait 60 seconds and try again (free tier limit)'
+      : error.message || 'Internal Server Error';
+    res.status(status).json({ error: msg });
   }
 });
 
