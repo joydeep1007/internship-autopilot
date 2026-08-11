@@ -2,3 +2,4 @@ python-jobspy==1.1.80
 google-generativeai>=0.7.0
 requests>=2.31.0
 pandas>=2.0.0
+python-dotenv==1.2.2
