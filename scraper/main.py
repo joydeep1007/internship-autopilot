@@ -283,7 +283,7 @@ def main() -> None:
 
     # Init Gemini
     genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
     # Load seen IDs to deduplicate
     seen_ids: set[str] = load_seen()
