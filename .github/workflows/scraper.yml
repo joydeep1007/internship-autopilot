@@ -37,7 +37,8 @@ jobs:
       - name: Run scraper pipeline
         env:
           GEMINI_KEY:        ${{ secrets.GEMINI_KEY }}
-          APOLLO_KEY:        ${{ secrets.APOLLO_KEY }}
+          SNOV_CLIENT_ID:    ${{ secrets.SNOV_CLIENT_ID }}
+          SNOV_SECRET:       ${{ secrets.SNOV_SECRET }}
           HUNTER_KEY:        ${{ secrets.HUNTER_KEY }}
           TELEGRAM_TOKEN:    ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID:  ${{ secrets.TELEGRAM_CHAT_ID }}

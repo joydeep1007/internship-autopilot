@@ -161,7 +161,7 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
                   {job.contact_email}
                 </p>
                 <p className="text-[11px] text-[#444] mt-1">
-                  Found via Apollo/Hunter
+                  Found via Hunter/Snov.io
                 </p>
               </div>
             ) : (

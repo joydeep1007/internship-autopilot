@@ -16,7 +16,7 @@ GitHub Actions (7:30 AM IST, Mon–Fri)
   ┌─────────────────────────────────────────┐
   │ 1. JobSpy → scrape LinkedIn + Indeed    │
   │ 2. Gemini Flash → score 0–100           │
-  │ 3. Apollo + Hunter → find emails        │
+  │ 3. Hunter + Snov.io → find emails       │
   │ 4. Save to frontend/src/data/jobs.json  │
   │ 5. Commit + push back to repo           │
   │ 6. Telegram digest to your phone        │
@@ -48,8 +48,9 @@ cd internship-autopilot
 | Key | Where | Free tier |
 |-----|-------|-----------|
 | `GEMINI_KEY` | [aistudio.google.com](https://aistudio.google.com) → Get API Key | 1500 calls/day |
-| `APOLLO_KEY` | [apollo.io](https://app.apollo.io) → Settings → API | Email credits included |
-| `HUNTER_KEY` | [hunter.io](https://hunter.io) → Dashboard → API | 50 searches/month |
+| `HUNTER_KEY` | [hunter.io](https://hunter.io) → Dashboard → API | 50 searches/month, real API |
+| `SNOV_CLIENT_ID` | [snov.io](https://app.snov.io) → Settings → API | 150 searches/month, real API |
+| `SNOV_SECRET` | same Snov.io settings page as above | (same signup) |
 | `TELEGRAM_TOKEN` | Telegram → @BotFather → /newbot | Free |
 | `TELEGRAM_CHAT_ID` | Telegram → @userinfobot → send /start | Free |
 | `VITE_ANTHROPIC_KEY` | [console.anthropic.com](https://console.anthropic.com) | Pay-per-use (~$0.006/resume) |
@@ -60,8 +61,9 @@ Go to your repo → **Settings → Secrets → Actions → New repository secret
 
 Add each of these:
 - `GEMINI_KEY`
-- `APOLLO_KEY`
 - `HUNTER_KEY`
+- `SNOV_CLIENT_ID`
+- `SNOV_SECRET`
 - `TELEGRAM_TOKEN`
 - `TELEGRAM_CHAT_ID`
 
@@ -110,8 +112,7 @@ Repeat 10 listings per day = done in ~90 minutes.
 |-----------|------|
 | JobSpy scraping | ₹0 |
 | Gemini scoring (1500/day free) | ₹0 |
-| Apollo email finding | ₹0 |
-| Hunter fallback (50/month) | ₹0 |
+| Hunter + Snov.io email finding (200/month free) | ₹0 |
 | Telegram alerts | ₹0 |
 | GitHub Actions (uses ~100 min/month of 2000 free) | ₹0 |
 | Claude API per resume (~$0.006) | ~₹0.50 |
@@ -190,6 +191,6 @@ internship-autopilot/
 ## This project on your CV
 
 > **Internship Autopilot** | Python · React · Gemini API · Anthropic API · GitHub Actions
-> *Built a full-stack job search automation pipeline: Python scraper (JobSpy) aggregates LinkedIn/Indeed daily, Gemini Flash scores 50+ listings against my skillset, Apollo finds hiring manager emails, and Claude generates tailored LaTeX resumes per JD. Scheduled on GitHub Actions with Telegram alerts. React dashboard for browsing, cold email generation, and one-click Overleaf export.*
+> *Built a full-stack job search automation pipeline: Python scraper (JobSpy) aggregates LinkedIn/Indeed daily, Gemini Flash scores 50+ listings against my skillset, Hunter.io + Snov.io find hiring manager emails (200/month free), and Claude generates tailored LaTeX resumes per JD. Scheduled on GitHub Actions with Telegram alerts. React dashboard for browsing, cold email generation, and one-click Overleaf export.*
 
 That description hits: Python, APIs, automation, AI/LLM integration, CI/CD, React, system design — all in one project you actually built for yourself.

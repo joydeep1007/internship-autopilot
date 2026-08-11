@@ -4,7 +4,7 @@ internship-autopilot/scraper/main.py
 Full pipeline:
   1. Scrape fresh internship listings (JobSpy)
   2. Score each listing against your skills (Gemini free API)
-  3. Find hiring manager email (Apollo → Hunter fallback)
+  3. Find hiring manager email (Hunter primary → Snov.io fallback)
   4. Deduplicate against previously seen listings
   5. Save results to ../frontend/src/data/jobs.json
   6. Send Telegram summary
@@ -32,8 +32,9 @@ GEMINI_KEY = os.getenv("GEMINI_KEY")
 if GEMINI_KEY is None:
     raise RuntimeError("GEMINI_KEY environment variable is missing")
 
-APOLLO_KEY      = os.getenv("APOLLO_KEY", "")
 HUNTER_KEY      = os.getenv("HUNTER_KEY", "")
+SNOV_CLIENT_ID  = os.getenv("SNOV_CLIENT_ID", "")
+SNOV_SECRET     = os.getenv("SNOV_SECRET", "")
 TELEGRAM_TOKEN  = os.getenv("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT   = os.getenv("TELEGRAM_CHAT_ID", "")
 
@@ -159,39 +160,86 @@ Return ONLY valid JSON (no markdown, no explanation):
 
 # ── Step 3: Find email ─────────────────────────────────────────────────────
 def find_email(company: str) -> str:
-    """Try Apollo first, Hunter as fallback."""
-    if APOLLO_KEY:
-        try:
-            url = "https://api.apollo.io/v1/people/search"
-            payload = {
-                "api_key": APOLLO_KEY,
-                "q_organization_name": company,
-                "q_titles": ["CTO", "Founder", "Engineering Manager",
-                             "Head of Engineering", "Tech Lead"],
-                "page": 1, "per_page": 1,
-            }
-            r = requests.post(url, json=payload, timeout=10)
-            people = r.json().get("people", [])
-            if people and people[0].get("email"):
-                return str(people[0]["email"])
-        except Exception as e:
-            print(f"    Apollo error for {company}: {e}")
+    """Hunter primary (50/month, real API) → Snov.io fallback (150/month, real API)."""
 
+    # Derive a likely domain slug from company name
+    slug = (
+        company.lower()
+        .replace(" technologies", "").replace(" tech", "")
+        .replace(" solutions", "").replace(" private limited", "")
+        .replace(" pvt ltd", "").replace(" pvt. ltd.", "")
+        .replace(" limited", "").replace(" inc", "")
+        .replace(",", "").replace(".", "").replace(" ", "")
+    ) + ".com"
+
+    # ── 1. Hunter.io — primary (50 free searches/month, full API access) ──
     if HUNTER_KEY:
         try:
-            # Convert company name to likely domain
-            slug = company.lower().replace(" ", "").replace(",", "").replace(".", "")
             r = requests.get(
                 "https://api.hunter.io/v2/domain-search",
-                params={"domain": f"{slug}.com", "api_key": HUNTER_KEY},
+                params={
+                    "domain": slug,
+                    "api_key": HUNTER_KEY,
+                    "limit": 5,
+                    "type": "personal",          # excludes generic info@ addresses
+                },
                 timeout=10,
             )
-            emails = r.json().get("data", {}).get("emails", [])
+            data = r.json().get("data", {})
+            emails = data.get("emails", [])
+            pattern = data.get("pattern", "")   # e.g. {first}@company.com — free info
+
             if emails:
-                return str(emails[0]["value"])
+                # Prefer engineering/founder roles over generic contacts
+                priority_roles = ["cto", "founder", "co-founder", "engineer",
+                                  "tech", "dev", "head of engineering", "vp engineering"]
+                for role in priority_roles:
+                    for e in emails:
+                        pos = e.get("position", "").lower()
+                        if role in pos:
+                            return e["value"]
+                # No priority match — return first available
+                return emails[0]["value"]
+
         except Exception as e:
             print(f"    Hunter error for {company}: {e}")
 
+    # ── 2. Snov.io — fallback (150 free searches/month, full API access) ──
+    if SNOV_CLIENT_ID and SNOV_SECRET:
+        try:
+            # Step 1: get access token
+            token_r = requests.post(
+                "https://api.snov.io/v1/oauth/access_token",
+                json={
+                    "grant_type": "client_credentials",
+                    "client_id": SNOV_CLIENT_ID,
+                    "client_secret": SNOV_SECRET,
+                },
+                timeout=10,
+            )
+            token = token_r.json().get("access_token", "")
+            if not token:
+                raise ValueError("No token returned")
+
+            # Step 2: domain email search
+            r = requests.post(
+                "https://api.snov.io/v2/domain-emails-with-info",
+                json={
+                    "access_token": token,
+                    "domain": slug,
+                    "type": "all",
+                    "limit": 5,
+                },
+                timeout=10,
+            )
+            emails = r.json().get("emails", [])
+            if emails:
+                return emails[0].get("email", "")
+
+        except Exception as e:
+            print(f"    Snov.io error for {company}: {e}")
+
+    # ── 3. Nothing found ──
     return ""
 
 # ── Step 4: Deduplication ──────────────────────────────────────────────────
