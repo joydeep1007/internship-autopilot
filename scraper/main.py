@@ -85,15 +85,21 @@ def scrape_jobs() -> list[dict[str, Any]]:
     for term in SEARCH_TERMS:
         try:
             scrape_args = {
-                "site_name": ["linkedin", "indeed", "glassdoor"],
+                "site_name": ["linkedin", "indeed"],
                 "search_term": term,
                 "location": "India",
                 "results_wanted": 20,
-                "hours_old": 24,
+                "hours_old": 72,
                 "country_indeed": "India",
             }
             if PROXY_URL:
                 scrape_args["proxies"] = [PROXY_URL]
+
+            os.environ["JOBSPY_USER_AGENT"] = (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/125.0.0.0 Safari/537.36"
+            )
 
             df = jobspy_scrape(**scrape_args)
             if df is not None and not df.empty:
@@ -283,7 +289,7 @@ def main() -> None:
 
     # Init Gemini
     genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel("gemini-2.5-flash-lite")
+    model = genai.GenerativeModel("gemini-3.5-flash")
 
     # Load seen IDs to deduplicate
     seen_ids: set[str] = load_seen()
