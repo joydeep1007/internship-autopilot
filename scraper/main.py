@@ -87,8 +87,8 @@ def scrape_jobs() -> list[dict[str, Any]]:
             scrape_args = {
                 "site_name": ["linkedin", "indeed"],
                 "search_term": term,
-                "location": "Kolkata",
-                "results_wanted": 15,
+                "location": "India",
+                "results_wanted": 20,
                 "hours_old": 48,
                 "country_indeed": "India",
             }
