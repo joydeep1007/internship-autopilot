@@ -118,6 +118,52 @@
     "applied": false
   },
   {
+    "score": 95,
+    "role_family": "swe",
+    "reason": "The candidate's robust full-stack project portfolio and diverse programming language skills make them an outstanding fit for a general junior software engineering role.",
+    "key_skills": [
+      "Python",
+      "Node.js",
+      "React.js"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "Junior Software Engineer",
+    "company": "Aleta Software Labs Private Limited",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=46be57a9b12bf5e8",
+    "description": "We are looking for a motivated and enthusiastic Software Intern to join our development team. As a software intern, you will work under the guidance of senior developers to assist in designing, coding, testing, and debugging software applications. This internship is a great opportunity to gain hands\\-on experience in real\\-world software development projects.\n\n**Key Responsibilities:**\n\nAssist in the design and development of software applications\n\nWrite clean, efficient, and well\\-documented code\n\nParticipate in code reviews and testing\n\nCollaborate with team members on software architecture and features\n\nTroubleshoot and debug issues in existing applications\n\nResearch and recommend solutions for new technologies or tools\n\nParticipate in daily stand\\-ups or project meetings\n\n**Requirement",
+    "date_posted": "2026-08-13",
+    "id": "in-46be57a9b12bf5e8",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-13T05:50:30.069015+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 95,
+    "role_family": "python",
+    "reason": "The candidate is an exceptional match due to their strong Python expertise, FastAPI experience, and direct hands-on projects in Computer Vision and AI, such as drowsiness detection with OpenCV.",
+    "key_skills": [
+      "Python",
+      "OpenCV",
+      "FastAPI"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "Python Developer (Fresher/Intern)",
+    "company": "Alluring Infotech Solutions",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=627d739e9ab42c11",
+    "description": "Are you passionate about Python, AI, and Computer Vision? Do you have a solid understanding of Python frameworks and eager to kickstart your career in a dynamic and innovative environment?\n\nAlluring Infotech Solutions is on the lookout for a talented and motivated Python Developer ( 0\\-1 year) experience to join our team!\n\n**Who We're Looking For:**  \n\u25fe Strong knowledge of Python programming  \n\u25fe Familiarity with Python frameworks (e.g., Django, Flask)  \n\u25fe Basic understanding of AI and Computer Vision concepts  \n\u25fe Eagerness to learn and adapt in a fast\\-paced environment  \n\u25fe Strong problem\\-solving skills and attention to detail\n\n**What We Offer:**  \n\u25fe Opportunity to work on cutting\\-edge AI and Computer Vision projects  \n\u25fe Mentorship from experienced professionals  \n\u25fe Collaborative and inc",
+    "date_posted": "2026-08-12",
+    "id": "in-627d739e9ab42c11",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-13T05:50:31.355040+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 82,
     "role_family": "swe",
     "reason": "The candidate's strong foundation in Python, Docker, and GitHub Actions aligns well with the cloud automation requirements, though the Noida location may require relocation from Kolkata.",
