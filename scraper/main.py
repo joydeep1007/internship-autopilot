@@ -56,7 +56,7 @@ Projects:  Algorithmic trading engine (Python/FastAPI),
            City Lens AI pipeline (TypeScript/Gemini/Groq/Supabase),
            Drowsiness detection (OpenCV/dlib),
            Neural network from scratch (NumPy, 97.2% MNIST accuracy)
-Education: B.Tech CSE, UEM Kolkata, CGPA 8.11, graduating 2026
+Education: B.Tech CSE, UEM Kolkata, CGPA 8.23, graduating 2026
 """
 
 SEARCH_TERMS = [
@@ -87,9 +87,9 @@ def scrape_jobs() -> list[dict[str, Any]]:
             scrape_args = {
                 "site_name": ["linkedin", "indeed"],
                 "search_term": term,
-                "location": "India",
-                "results_wanted": 20,
-                "hours_old": 72,
+                "location": "Kolkata",
+                "results_wanted": 15,
+                "hours_old": 48,
                 "country_indeed": "India",
             }
             if PROXY_URL:
@@ -127,7 +127,7 @@ def scrape_jobs() -> list[dict[str, Any]]:
     return list(filtered.to_dict("records"))
 
 # ── Step 2: Score with Gemini ──────────────────────────────────────────────
-def score_job(job: dict[str, Any], model: Any) -> dict[str, Any] | None:
+def score_job(job: dict[str, Any], primary_model: Any, fallback_model: Any) -> dict[str, Any] | None:
     """Score 0-100 and extract key info from a job listing."""
     desc   = str(job.get("description", ""))[:800]
     title  = str(job.get("title", "Unknown Role"))
@@ -153,9 +153,10 @@ Return ONLY valid JSON (no markdown, no explanation):
   "estimated_stipend": "<e.g. ₹15,000-25,000/month or Unknown>"
 }}
 """
+    current_model = primary_model
     for attempt in range(3):
         try:
-            resp = model.generate_content(prompt)
+            resp = current_model.generate_content(prompt)
             text = resp.text.strip().replace("```json", "").replace("```", "")
             parsed: dict[str, Any] = json.loads(text)
             parsed["title"]   = title
@@ -168,8 +169,13 @@ Return ONLY valid JSON (no markdown, no explanation):
             return parsed
         except Exception as e:
             if "429" in str(e) or "quota" in str(e).lower():
-                print(f"    Rate limit hit for {title}. Waiting 30s...")
-                time.sleep(30)
+                if current_model == primary_model:
+                    print(f"    Rate limit hit for {title} on primary model. Falling back to lite model...")
+                    current_model = fallback_model
+                    continue
+                else:
+                    print(f"    Rate limit hit for {title} on fallback model. Waiting 30s...")
+                    time.sleep(30)
             else:
                 print(f"    Score parse error for {title}: {e}")
                 return None
@@ -289,7 +295,8 @@ def main() -> None:
 
     # Init Gemini
     genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel("gemini-3.5-flash")
+    primary_model = genai.GenerativeModel("gemini-3.6-flash")
+    fallback_model = genai.GenerativeModel("gemini-3.1-flash-lite")
 
     # Load seen IDs to deduplicate
     seen_ids: set[str] = load_seen()
@@ -309,7 +316,7 @@ def main() -> None:
     scored: list[dict[str, Any]] = []
     for i, job in enumerate(new_raw):
         print(f"  [{i+1}/{len(new_raw)}] {job.get('company','?')} — {job.get('title','?')}")
-        result: dict[str, Any] | None = score_job(job, model)
+        result: dict[str, Any] | None = score_job(job, primary_model, fallback_model)
         if result and result.get("score", 0) >= SCORE_THRESHOLD:
             scored.append(result)
             print(f"    → score {result['score']} ✓")
