@@ -311,6 +311,31 @@
     "applied": false
   },
   {
+    "score": 95,
+    "role_family": "python",
+    "reason": "The candidate's project experience with algorithmic trading and AI pipelines aligns perfectly with the company's requirement for Python and AI/ML expertise.",
+    "key_skills": [
+      "Python",
+      "FastAPI",
+      "AI/ML",
+      "React.js",
+      "WebSockets"
+    ],
+    "estimated_stipend": "\u20b920,000-35,000/month",
+    "title": "Python Developer Intern",
+    "company": "Zerotwo Solutions",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=02899143b5ab6811",
+    "description": "**This is not a comfort zone internship.** We are not looking for someone who only wants to complete an internship or get a certificate.\n\nWe are looking for a **highly motivated Python Developer Intern** who is genuinely passionate about learning new technologies and wants to work on **real world software projects**.\n\nIf you are eager to learn, ready to work hard, and want to challenge yourself with new technologies, this opportunity is for you.\n\nWhat You Will Learn and Work With\n\nPython  \nDjango  \nReact JS  \nAI/ML and LangChain  \nRedis  \nWebSockets  \nREST APIs  \nReal time applications  \nModern cloud technologies\n\nYou do not need to know all of these technologies. **We will train you.** What matters most is your ability to learn quickly, adapt to new frameworks, and take responsibility for",
+    "date_posted": "2026-08-15",
+    "id": "in-02899143b5ab6811",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-17T03:09:07.566554+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 92,
     "role_family": "swe",
     "reason": "The candidate's versatile full-stack project background and strong fundamental CS skills make them an ideal fit for a generalist Junior Software Engineer intern role.",
@@ -330,6 +355,52 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-14T04:23:18.211915+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "The candidate strongly matches the Node.js internship requirements with hands-on Node.js/Express project experience and a relevant B.Tech CSE degree.",
+    "key_skills": [
+      "Node.js",
+      "Express.js",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b98,000 - \u20b915,000/month",
+    "title": "Node.js Developer Intern",
+    "company": "Unikwork",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c7e0f95c63fbb031",
+    "description": "**Node.js Developer Intern**\n----------------------------\n\n\n#### **Qualification**\n\n\nBE (CSE/IT)/ B.TECH(CSE/IT)/ MCA/ ME(CSE/IT)/ M.SC/ M.TECH(CSE/IT)\n\n\n#### **Location**\n\n\nSurat\n\n\n#### **Salary range**\n\n\n#### **Experience/Seniority level**\n\n\nFresher\n\n\n#### **Job Time**\n\n\nFull Time\n\n\n#### **Requirements / Your Skills**\n\n\nDesign, build and implement applications based on specification\n\n\nWorking with different stackholders to ensure successful software release\n\n\nGood understanding of object\\-oriented programming, algorithms, and data structures",
+    "date_posted": "2026-08-16",
+    "id": "in-c7e0f95c63fbb031",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-17T03:09:05.492963+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "The candidate's extensive full-stack experience in React, Node.js, REST APIs, and database integration directly aligns with all core responsibilities of this web development internship.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b93,000 \u2013 \u20b95,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c57634edeaf0fa6c",
+    "description": "**JOB DESCRIPTION**\n\n**Full Stack Developer Intern**\n\n**Job Details**\n\n* **Company:** ECOG Core Technologies\n* **Department:** Software Development\n* **Employment Type:** Full\\-Time Internship\n* **Duration:** 3 Months\n* **Stipend:** \u20b93,000 \u2013 \u20b95,000 per month\n* **Work Location:** In Person\n\n**Job Summary**\n\nECOG Core Technologies is looking for a passionate **Full Stack Developer Intern** to join our Software Development team. This internship provides hands\\-on experience in building web applications, developing APIs, working with databases, and collaborating with experienced developers on live projects.\n\n**Key Responsibilities**\n\n* Assist in developing and maintaining web applications.\n* Build responsive user interfaces using modern web technologies.\n* Develop and integrate backend APIs.\n*",
+    "date_posted": "2026-08-15",
+    "id": "in-c57634edeaf0fa6c",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-17T03:09:06.983241+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -740,6 +811,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-14T04:23:46.180590+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 72,
+    "role_family": "mern",
+    "reason": "The candidate has strong React.js, JavaScript, and TypeScript foundations that translate well to React Native, though explicit mobile development experience is missing.",
+    "key_skills": [
+      "React.js",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Front End Developer Intern (React Native)",
+    "company": "Begin",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b52538151d304e3f",
+    "description": "**Company Description**\n\nBegin is a growing technology company focused on building intuitive, user\\-centered digital products. The team values creativity, collaboration, and continuous learning, providing an environment where new ideas are encouraged and tested quickly. Begin emphasizes modern engineering practices, clean design, and reliable performance in all its offerings. Team members are supported with mentorship and opportunities to work with contemporary tools and frameworks. The company is committed to helping people learn, build, and launch impactful products efficiently.\n\n**Role Description**\n\nThis is a part\\-time, fully remote Frontend Intern (React Native) role with flexible timings, suited to students or early\\-career developers balancing study or other commitments. The intern",
+    "date_posted": "2026-08-16",
+    "id": "in-b52538151d304e3f",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-17T03:09:06.221126+00:00",
     "resume_generated": false,
     "applied": false
   },
