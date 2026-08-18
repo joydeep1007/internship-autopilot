@@ -277,8 +277,10 @@ RULES:
 
     const message = await groq.chat.completions.create({
       model: "qwen/qwen3.6-27b",
-      max_tokens: 500,
+      max_tokens: 800,
       temperature: 0.7,
+      reasoning_effort: "none",
+      reasoning_fromat: "hidden",
       messages: [{ role: "user", content: prompt }],
     });
 
