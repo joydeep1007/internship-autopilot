@@ -19,14 +19,15 @@ function ScoreRing({ score }) {
   );
 }
 
-function JobCard({ job, onClick }) {
+function JobCard({ job, onClick, onClear }) {
   const rf = ROLE_COLORS[job.role_family] || ROLE_COLORS.other;
   return (
-    <button
-      onClick={onClick}
-      className="w-full text-left bg-[#111115] border border-[#1e1e24] rounded-xl p-4
-                 hover:border-[#2d2d38] hover:bg-[#141418] transition-all group"
-    >
+    <div className="relative group/card">
+      <button
+        onClick={onClick}
+        className="w-full text-left bg-[#111115] border border-[#1e1e24] rounded-xl p-4
+                   hover:border-[#2d2d38] hover:bg-[#141418] transition-all group"
+      >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1 flex-wrap">
@@ -74,14 +75,22 @@ function JobCard({ job, onClick }) {
       {job.reason && (
         <p className="text-[11px] text-[#555] mt-2 line-clamp-1">{job.reason}</p>
       )}
-    </button>
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); onClear(); }}
+        className="absolute top-2 right-2 text-[#444] hover:text-[#f87171] p-1 rounded opacity-0 group-hover/card:opacity-100 transition-opacity"
+        title="Clear Job"
+      >
+        ✕
+      </button>
+    </div>
   );
 }
 
 export default function JobList({
   jobs, allJobs, filter, setFilter,
   statusFilter, setStatusFilter,
-  sortBy, setSortBy, onSelectJob,
+  sortBy, setSortBy, onSelectJob, onClearAll, onClearJob
 }) {
   const countByRole = (role) =>
     role === "all" ? allJobs.length : allJobs.filter(j => j.role_family === role).length;
@@ -152,6 +161,13 @@ export default function JobList({
           <option value="score">Sort: Score</option>
           <option value="date">Sort: Date</option>
         </select>
+
+        <button
+          onClick={onClearAll}
+          className="text-xs px-3 py-2 rounded bg-[#1e1e24] text-[#f87171] hover:bg-[#2d2d38] transition-colors font-medium border border-[#1e1e24]"
+        >
+          Clear All
+        </button>
       </div>
 
       {/* Job grid */}
@@ -166,7 +182,7 @@ export default function JobList({
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {jobs.map(job => (
-            <JobCard key={job.id} job={job} onClick={() => onSelectJob(job)} />
+            <JobCard key={job.id} job={job} onClick={() => onSelectJob(job)} onClear={() => onClearJob(job.id)} />
           ))}
         </div>
       )}

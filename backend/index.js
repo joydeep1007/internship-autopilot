@@ -11,6 +11,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const resumePath = path.join(__dirname, '../frontend/src/data/master_resume.json');
+const jobsPath = path.join(__dirname, '../frontend/src/data/jobs.json');
 
 const app = express();
 const port = 3001;
@@ -209,6 +210,30 @@ app.put('/api/resume', async (req, res) => {
   } catch (error) {
     console.error('Error writing resume:', error);
     res.status(500).json({ error: 'Failed to write resume schema' });
+  }
+});
+
+app.delete('/api/jobs', async (req, res) => {
+  try {
+    await fs.writeFile(jobsPath, JSON.stringify([], null, 2), 'utf8');
+    res.json({ success: true, message: 'All jobs cleared' });
+  } catch (error) {
+    console.error('Error clearing jobs:', error);
+    res.status(500).json({ error: 'Failed to clear jobs' });
+  }
+});
+
+app.delete('/api/jobs/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = await fs.readFile(jobsPath, 'utf8');
+    const jobs = JSON.parse(data);
+    const updatedJobs = jobs.filter(j => j.id !== id);
+    await fs.writeFile(jobsPath, JSON.stringify(updatedJobs, null, 2), 'utf8');
+    res.json({ success: true, message: 'Job cleared' });
+  } catch (error) {
+    console.error('Error clearing job:', error);
+    res.status(500).json({ error: 'Failed to clear job' });
   }
 });
 

@@ -43,6 +43,19 @@ export default function App() {
     setJobs(prev => prev.map(j => j.id === jobId ? { ...j, applied: true } : j));
   }
 
+  function clearAllJobs() {
+    if (!window.confirm("Are you sure you want to clear all jobs?")) return;
+    fetch("http://localhost:3001/api/jobs", { method: "DELETE" })
+      .then(() => setJobs([]))
+      .catch(err => console.error("Failed to clear jobs:", err));
+  }
+
+  function clearJob(jobId) {
+    fetch(`http://localhost:3001/api/jobs/${jobId}`, { method: "DELETE" })
+      .then(() => setJobs(prev => prev.filter(j => j.id !== jobId)))
+      .catch(err => console.error("Failed to clear job:", err));
+  }
+
   function openDetail(job) {
     setSelectedJob(job);
     setView("detail");
@@ -74,6 +87,8 @@ export default function App() {
           sortBy={sortBy}
           setSortBy={setSortBy}
           onSelectJob={openDetail}
+          onClearAll={clearAllJobs}
+          onClearJob={clearJob}
         />
       )}
 
