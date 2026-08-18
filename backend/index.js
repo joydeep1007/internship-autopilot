@@ -173,6 +173,8 @@ Return ONLY the complete LaTeX document starting with %%META. No explanation. No
       model: "openai/gpt-oss-120b",
       max_tokens: 4000,
       temperature: 0.3,
+      reasoning_effort: "medium",
+      include_reasoning: false,
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -280,7 +282,6 @@ RULES:
       max_tokens: 800,
       temperature: 0.7,
       reasoning_effort: "none",
-      reasoning_fromat: "hidden",
       messages: [{ role: "user", content: prompt }],
     });
 
