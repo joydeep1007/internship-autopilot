@@ -170,7 +170,7 @@ Return ONLY the complete LaTeX document starting with %%META. No explanation. No
 `;
 
     const message = await groq.chat.completions.create({
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-20b",
       max_tokens: 4000,
       temperature: 0.3,
       messages: [{ role: "user", content: prompt }],
