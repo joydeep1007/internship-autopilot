@@ -67,7 +67,7 @@ function JobCard({ job, onClick, onClear }) {
           )}
         </div>
 
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 mr-4">
           <ScoreRing score={job.score || 0} />
         </div>
       </div>
@@ -78,7 +78,7 @@ function JobCard({ job, onClick, onClear }) {
       </button>
       <button
         onClick={(e) => { e.stopPropagation(); onClear(); }}
-        className="absolute top-2 right-2 text-[#444] hover:text-[#f87171] p-1 rounded opacity-0 group-hover/card:opacity-100 transition-opacity"
+        className="absolute top-1 right-1 text-[#777] hover:text-[#f87171] p-1.5 rounded-full hover:bg-[#1e1e24] opacity-60 group-hover/card:opacity-100 transition-all z-10 flex items-center justify-center"
         title="Clear Job"
       >
         ✕
