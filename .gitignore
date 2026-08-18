@@ -20,6 +20,4 @@ Thumbs.db
 .vscode/
 
 # Scraper state
-scraper/.seen_ids.json
-frontend/src/data/jobs.json
 node_modules/
