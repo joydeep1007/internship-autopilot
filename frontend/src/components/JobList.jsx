@@ -25,8 +25,8 @@ function JobCard({ job, onClick, onClear }) {
     <div className="relative group/card">
       <button
         onClick={onClick}
-        className="w-full text-left bg-[#111115] border border-[#1e1e24] rounded-xl p-4
-                   hover:border-[#2d2d38] hover:bg-[#141418] transition-all group"
+        className="w-full text-left glass-card rounded-xl p-5
+                   hover:bg-white/[0.05] hover:border-indigo-500/50 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 group"
       >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
@@ -113,7 +113,7 @@ export default function JobList({
           { label: "Applied",          value: applied },
           { label: "Avg Match Score",  value: avgScore },
         ].map(stat => (
-          <div key={stat.label} className="bg-[#111115] border border-[#1e1e24] rounded-xl p-3">
+          <div key={stat.label} className="glass-card rounded-xl p-4 hover:bg-white/[0.04] transition-colors">
             <div className="text-xl font-bold text-[#e8e8e8]">{stat.value}</div>
             <div className="text-[11px] text-[#555] mt-0.5">{stat.label}</div>
           </div>
@@ -122,15 +122,15 @@ export default function JobList({
 
       {/* Filters */}
       <div className="flex items-center gap-2 mb-4 flex-wrap">
-        <div className="flex gap-1 bg-[#111115] border border-[#1e1e24] rounded-lg p-1">
+        <div className="flex gap-1 glass-card rounded-lg p-1">
           {FILTERS.map(f => (
             <button
               key={f}
               onClick={() => setFilter(f)}
               className={`text-xs px-3 py-1.5 rounded transition-colors font-medium ${
                 filter === f
-                  ? "bg-[#1e1e24] text-white"
-                  : "text-[#555] hover:text-[#888]"
+                  ? "bg-white/10 text-white shadow-sm"
+                  : "text-[#888] hover:text-white hover:bg-white/5"
               }`}
             >
               {f === "all" ? `All (${countByRole("all")})` : `${f.toUpperCase()} (${countByRole(f)})`}
@@ -138,13 +138,13 @@ export default function JobList({
           ))}
         </div>
 
-        <div className="flex gap-1 bg-[#111115] border border-[#1e1e24] rounded-lg p-1 ml-auto">
+        <div className="flex gap-1 glass-card rounded-lg p-1 ml-auto">
           {[["all","All"],["new","New"],["applied","Applied"]].map(([v,l]) => (
             <button
               key={v}
               onClick={() => setStatusFilter(v)}
-              className={`text-xs px-3 py-1.5 rounded transition-colors ${
-                statusFilter === v ? "bg-[#1e1e24] text-white" : "text-[#555] hover:text-[#888]"
+              className={`text-xs px-3 py-1.5 rounded transition-colors font-medium ${
+                statusFilter === v ? "bg-white/10 text-white shadow-sm" : "text-[#888] hover:text-white hover:bg-white/5"
               }`}
             >
               {l}
@@ -155,8 +155,8 @@ export default function JobList({
         <select
           value={sortBy}
           onChange={e => setSortBy(e.target.value)}
-          className="text-xs bg-[#111115] border border-[#1e1e24] rounded-lg px-3 py-2
-                     text-[#888] focus:outline-none"
+          className="text-xs glass-card rounded-lg px-3 py-2
+                     text-[#ccc] focus:outline-none focus:ring-1 focus:ring-indigo-500/50 appearance-none bg-transparent cursor-pointer"
         >
           <option value="score">Sort: Score</option>
           <option value="date">Sort: Date</option>
@@ -164,7 +164,7 @@ export default function JobList({
 
         <button
           onClick={onClearAll}
-          className="text-xs px-3 py-2 rounded bg-[#1e1e24] text-[#f87171] hover:bg-[#2d2d38] transition-colors font-medium border border-[#1e1e24]"
+          className="text-xs px-3 py-2 rounded glass-card text-[#f87171] hover:bg-red-500/10 hover:border-red-500/20 transition-colors font-medium"
         >
           Clear All
         </button>

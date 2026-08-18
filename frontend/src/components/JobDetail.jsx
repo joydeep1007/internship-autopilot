@@ -53,17 +53,17 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
         <div className="lg:col-span-2 space-y-4">
 
           {/* Title card */}
-          <div className="bg-[#111115] border border-[#1e1e24] rounded-xl p-5">
+          <div className="glass-panel rounded-xl p-6">
             <div className="flex items-start justify-between">
               <div>
-                <span className="text-xs font-medium" style={{ color: rfColor }}>
+                <span className="text-xs font-semibold tracking-wider" style={{ color: rfColor }}>
                   {job.role_family?.toUpperCase()}
                 </span>
                 <h1 className="text-xl font-bold text-white mt-1">{job.title}</h1>
                 <p className="text-[#888] mt-0.5">{job.company}</p>
               </div>
               <div className="text-right flex-shrink-0">
-                <div className="text-3xl font-bold" style={{ color: scoreColor }}>
+                <div className={`text-4xl font-bold ${job.score >= 80 ? 'animate-pulse' : ''}`} style={{ color: scoreColor, textShadow: job.score >= 80 ? `0 0 20px ${scoreColor}80` : 'none' }}>
                   {job.score}
                 </div>
                 <div className="text-[11px] text-[#444]">match score</div>
@@ -99,8 +99,8 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
           </div>
 
           {/* JD text */}
-          <div className="bg-[#111115] border border-[#1e1e24] rounded-xl p-5">
-            <h2 className="text-xs font-semibold text-[#444] uppercase tracking-wider mb-3">
+          <div className="glass-panel rounded-xl p-6">
+            <h2 className="text-xs font-bold text-[#666] uppercase tracking-wider mb-4">
               Job Description
             </h2>
             <p className="text-sm text-[#bbb] leading-relaxed whitespace-pre-wrap">
@@ -113,15 +113,15 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
         <div className="space-y-4">
 
           {/* Primary actions */}
-          <div className="bg-[#111115] border border-[#1e1e24] rounded-xl p-4 space-y-3">
-            <h2 className="text-xs font-semibold text-[#444] uppercase tracking-wider">
+          <div className="glass-panel rounded-xl p-5 space-y-3">
+            <h2 className="text-xs font-bold text-[#666] uppercase tracking-wider">
               Actions
             </h2>
 
             <button
               onClick={onTailor}
-              className="w-full py-2.5 bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg
-                         text-sm font-semibold transition-colors"
+              className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg
+                         text-sm font-semibold transition-all hover:shadow-[0_0_15px_rgba(79,70,229,0.4)] active:scale-95"
             >
               ✨ Tailor Resume for This Role
             </button>
@@ -129,8 +129,8 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
             <button
               onClick={emailState === "idle" ? handleGenerateEmail : undefined}
               disabled={emailState === "loading"}
-              className="w-full py-2.5 border border-[#2d2d38] hover:border-[#444]
-                         rounded-lg text-sm transition-colors disabled:opacity-50"
+              className="w-full py-3 border border-white/10 hover:border-white/20 hover:bg-white/5
+                         rounded-lg text-sm transition-all active:scale-95 disabled:opacity-50"
             >
               {emailState === "loading"
                 ? "Writing email..."
@@ -142,8 +142,8 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
             {!job.applied && (
               <button
                 onClick={onMarkApplied}
-                className="w-full py-2.5 border border-[#2d2d38] hover:border-[#4ade80]
-                           hover:text-[#4ade80] rounded-lg text-sm transition-colors text-[#666]"
+                className="w-full py-3 border border-white/10 hover:border-[#4ade80]/50 hover:bg-[#4ade80]/10
+                           hover:text-[#4ade80] rounded-lg text-sm transition-all active:scale-95 text-[#888]"
               >
                 ✓ Mark as Applied
               </button>
@@ -151,8 +151,8 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
           </div>
 
           {/* Contact */}
-          <div className="bg-[#111115] border border-[#1e1e24] rounded-xl p-4">
-            <h2 className="text-xs font-semibold text-[#444] uppercase tracking-wider mb-2">
+          <div className="glass-panel rounded-xl p-5">
+            <h2 className="text-xs font-bold text-[#666] uppercase tracking-wider mb-3">
               Contact
             </h2>
             {job.contact_email ? (
@@ -175,9 +175,9 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
 
           {/* Generated email */}
           {emailState === "done" && emailContent && (
-            <div className="bg-[#111115] border border-[#2d4a1a] rounded-xl p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h2 className="text-xs font-semibold text-[#4ade80] uppercase tracking-wider">
+            <div className="glass-panel border-green-900/50 bg-green-950/10 rounded-xl p-5">
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-xs font-bold text-[#4ade80] uppercase tracking-wider">
                   Generated Email
                 </h2>
                 <div className="flex gap-2">
@@ -198,9 +198,9 @@ export default function JobDetail({ job, masterResume, onTailor, onMarkApplied, 
                 </div>
               </div>
               <textarea
-                className="w-full h-56 bg-[#0d0d0f] border border-[#1e1e24] rounded-lg
+                className="w-full h-56 bg-white/5 border border-white/10 rounded-lg
                            p-3 text-xs text-[#ccc] resize-none focus:outline-none
-                           focus:border-[#2d2d38] font-mono leading-relaxed"
+                           focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 font-mono leading-relaxed transition-all"
                 value={emailContent}
                 onChange={e => setEmailContent(e.target.value)}
               />

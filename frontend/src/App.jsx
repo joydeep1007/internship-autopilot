@@ -67,7 +67,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0d0d0f] text-[#e8e8e8] font-sans">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#13131a] to-[#09090b] text-[#e8e8e8] selection:bg-indigo-500/30">
       <Header
         view={view}
         onBack={() => setView(view === "tailor" ? "detail" : "jobs")}

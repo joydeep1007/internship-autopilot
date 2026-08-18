@@ -108,7 +108,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
 
   return (
     <div className="max-w-5xl mx-auto p-6 pb-24 text-sm">
-      <div className="flex justify-between items-center mb-8 border-b border-[#2a2a32] pb-4 sticky top-14 bg-[#0d0d0f] z-30">
+      <div className="flex justify-between items-center mb-8 border-b border-white/5 pb-4 sticky top-14 bg-[#09090b]/90 backdrop-blur-md z-30 pt-4 -mt-4">
         <h1 className="text-2xl font-semibold text-[#e8e8e8]">Resume Editor</h1>
         
         <div className="flex items-center gap-4">
@@ -127,7 +127,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
           <button
             onClick={handleSave}
             disabled={!isDirty || saveState === "saving"}
-            className={`px-4 py-1.5 rounded font-medium transition-colors ${!isDirty || saveState === "saving" ? 'bg-[#1e1e24] text-[#666] cursor-not-allowed' : 'bg-[#2563eb] text-[#fff] hover:bg-[#1d4ed8]'}`}
+            className={`px-4 py-1.5 rounded font-medium transition-all ${!isDirty || saveState === "saving" ? 'bg-white/5 text-[#666] cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-500 hover:shadow-[0_0_15px_rgba(79,70,229,0.4)] active:scale-95'}`}
           >
             {saveState === "saving" ? "Saving..." : "Save Changes"}
           </button>
@@ -136,7 +136,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
 
       <div className="space-y-10">
         {/* Personal Info */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <h2 className="text-lg font-medium text-[#e8e8e8] mb-4">Personal Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {Object.entries(resume.personal || {}).map(([key, value]) => (
@@ -146,7 +146,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
                   type="text"
                   value={value}
                   onChange={(e) => handleChange(['personal', key], e.target.value)}
-                  className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2 text-[#e8e8e8] focus:border-[#2563eb] focus:outline-none"
+                  className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all"
                 />
               </div>
             ))}
@@ -154,7 +154,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
         </section>
 
         {/* Summaries */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <h2 className="text-lg font-medium text-[#e8e8e8] mb-4">Professional Summaries</h2>
           <div className="space-y-4">
             {Object.entries(resume.summaries || {}).map(([key, value]) => (
@@ -163,7 +163,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
                 <textarea
                   value={value}
                   onChange={(e) => handleChange(['summaries', key], e.target.value)}
-                  className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2 text-[#e8e8e8] focus:border-[#2563eb] focus:outline-none min-h-[80px]"
+                  className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none min-h-[80px] transition-all"
                 />
               </div>
             ))}
@@ -171,7 +171,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
         </section>
 
         {/* Skills */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <h2 className="text-lg font-medium text-[#e8e8e8] mb-4">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(resume.skills || {}).map(([key, value]) => (
@@ -181,7 +181,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
                   type="text"
                   value={(value || []).join(', ')}
                   onChange={(e) => handleChange(['skills', key], e.target.value.split(',').map(s => s.trim()).filter(Boolean))}
-                  className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2 text-[#e8e8e8] focus:border-[#2563eb] focus:outline-none"
+                  className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all"
                 />
               </div>
             ))}
@@ -189,7 +189,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
         </section>
 
         {/* Experience */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-medium text-[#e8e8e8]">Experience</h2>
             <button onClick={() => handleArrayAdd(['experience'], { role: '', company: '', duration: '', location: '', bullets: [] })} className="text-xs px-2 py-1 bg-[#2563eb] text-white rounded hover:bg-[#1d4ed8]">+ Add</button>
@@ -197,24 +197,24 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
           
           <div className="space-y-6">
             {(resume.experience || []).map((exp, i) => (
-              <div key={i} className="border border-[#2a2a32] p-4 rounded bg-[#141419] relative">
+              <div key={i} className="glass-card p-5 rounded-lg relative">
                 <button onClick={() => handleArrayRemove(['experience'], i)} className="absolute top-4 right-4 text-xs text-[#ef4444] hover:text-[#b91c1c]">Remove</button>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 pr-16">
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Company</label>
-                    <input type="text" value={exp.company || ''} onChange={(e) => handleChange(['experience', i, 'company'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={exp.company || ''} onChange={(e) => handleChange(['experience', i, 'company'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Role</label>
-                    <input type="text" value={exp.role || ''} onChange={(e) => handleChange(['experience', i, 'role'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={exp.role || ''} onChange={(e) => handleChange(['experience', i, 'role'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Duration</label>
-                    <input type="text" value={exp.duration || ''} onChange={(e) => handleChange(['experience', i, 'duration'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={exp.duration || ''} onChange={(e) => handleChange(['experience', i, 'duration'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Location</label>
-                    <input type="text" value={exp.location || ''} onChange={(e) => handleChange(['experience', i, 'location'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={exp.location || ''} onChange={(e) => handleChange(['experience', i, 'location'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                 </div>
                 
@@ -226,7 +226,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
                   <div className="space-y-2">
                     {(exp.bullets || []).map((bullet, j) => (
                       <div key={j} className="flex gap-2">
-                        <textarea value={bullet} onChange={(e) => handleChange(['experience', i, 'bullets', j], e.target.value)} className="flex-1 bg-[#0d0d0f] border border-[#2a2a32] rounded p-2 text-[#e8e8e8] min-h-[40px]" />
+                        <textarea value={bullet} onChange={(e) => handleChange(['experience', i, 'bullets', j], e.target.value)} className="flex-1 bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] min-h-[40px] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                         <button onClick={() => handleArrayRemove(['experience', i, 'bullets'], j)} className="text-[#666] hover:text-[#ef4444]">✕</button>
                       </div>
                     ))}
@@ -238,7 +238,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
         </section>
 
         {/* Projects */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-medium text-[#e8e8e8]">Projects</h2>
             <button onClick={() => handleArrayAdd(['projects'], { id: `proj_${Date.now()}`, name: '', tech: [], role_relevance: [], bullets: {} })} className="text-xs px-2 py-1 bg-[#2563eb] text-white rounded hover:bg-[#1d4ed8]">+ Add Project</button>
@@ -246,24 +246,24 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
           
           <div className="space-y-6">
             {(resume.projects || []).map((proj, i) => (
-              <div key={i} className="border border-[#2a2a32] p-4 rounded bg-[#141419] relative">
+              <div key={i} className="glass-card p-5 rounded-lg relative">
                 <button onClick={() => handleArrayRemove(['projects'], i)} className="absolute top-4 right-4 text-xs text-[#ef4444] hover:text-[#b91c1c]">Remove</button>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 pr-16">
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Name</label>
-                    <input type="text" value={proj.name || ''} onChange={(e) => handleChange(['projects', i, 'name'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={proj.name || ''} onChange={(e) => handleChange(['projects', i, 'name'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">ID (Internal)</label>
-                    <input type="text" value={proj.id || ''} onChange={(e) => handleChange(['projects', i, 'id'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={proj.id || ''} onChange={(e) => handleChange(['projects', i, 'id'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">GitHub Link</label>
-                    <input type="text" value={proj.github || ''} onChange={(e) => handleChange(['projects', i, 'github'], e.target.value)} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={proj.github || ''} onChange={(e) => handleChange(['projects', i, 'github'], e.target.value)} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                   <div>
                     <label className="block text-xs text-[#a0a0a0] mb-1">Tech (comma separated)</label>
-                    <input type="text" value={(proj.tech || []).join(', ')} onChange={(e) => handleChange(['projects', i, 'tech'], e.target.value.split(',').map(s => s.trim()).filter(Boolean))} className="w-full bg-[#0d0d0f] border border-[#2a2a32] rounded p-2" />
+                    <input type="text" value={(proj.tech || []).join(', ')} onChange={(e) => handleChange(['projects', i, 'tech'], e.target.value.split(',').map(s => s.trim()).filter(Boolean))} className="w-full bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                   </div>
                 </div>
                 
@@ -308,7 +308,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
         </section>
 
         {/* Certifications */}
-        <section className="bg-[#1e1e24] p-5 rounded-lg border border-[#2a2a32]">
+        <section className="glass-panel p-6 rounded-xl">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-medium text-[#e8e8e8]">Certifications</h2>
             <button onClick={() => handleArrayAdd(['certifications'], '')} className="text-xs px-2 py-1 bg-[#2563eb] text-white rounded hover:bg-[#1d4ed8]">+ Add</button>
@@ -317,7 +317,7 @@ export default function ResumeEditor({ masterResume, onSaveSuccess }) {
           <div className="space-y-2">
             {(resume.certifications || []).map((cert, i) => (
               <div key={i} className="flex gap-2">
-                <input type="text" value={cert} onChange={(e) => handleChange(['certifications', i], e.target.value)} className="flex-1 bg-[#0d0d0f] border border-[#2a2a32] rounded p-2 text-[#e8e8e8]" />
+                <input type="text" value={cert} onChange={(e) => handleChange(['certifications', i], e.target.value)} className="flex-1 bg-white/5 border border-white/10 rounded p-2 text-[#e8e8e8] focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 focus:outline-none transition-all" />
                 <button onClick={() => handleArrayRemove(['certifications'], i)} className="text-[#666] hover:text-[#ef4444]">✕</button>
               </div>
             ))}

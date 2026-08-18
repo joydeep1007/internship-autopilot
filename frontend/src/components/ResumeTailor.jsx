@@ -59,8 +59,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
     return (
       <div className="max-w-2xl mx-auto px-5 py-16 text-center">
         <div className="mb-6">
-          <div className="inline-flex items-center gap-2 bg-[#111115] border border-[#1e1e24]
-                          rounded-full px-4 py-1.5 text-xs text-[#888] mb-4">
+          <div className="inline-flex items-center gap-2 glass-panel rounded-full px-4 py-1.5 text-xs text-[#ccc] mb-4 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80]" />
             {job.company} — {job.title}
           </div>
@@ -73,8 +72,8 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
         </div>
 
         {/* What will happen */}
-        <div className="bg-[#111115] border border-[#1e1e24] rounded-xl p-5 mb-6 text-left">
-          <h2 className="text-xs font-semibold text-[#444] uppercase tracking-wider mb-3">
+        <div className="glass-panel rounded-xl p-6 mb-6 text-left">
+          <h2 className="text-xs font-bold text-[#666] uppercase tracking-wider mb-4">
             What gets tailored
           </h2>
           {[
@@ -84,7 +83,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
             ["Skills", "Reordered — most relevant to this role first"],
             ["Output", "Complete .tex file, compile instantly in Overleaf"],
           ].map(([key, val]) => (
-            <div key={key} className="flex justify-between py-2 border-b border-[#1a1a1a] last:border-0">
+            <div key={key} className="flex justify-between py-2 border-b border-white/10 last:border-0">
               <span className="text-sm font-medium text-[#bbb]">{key}</span>
               <span className="text-sm text-[#666]">{val}</span>
             </div>
@@ -97,8 +96,8 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
 
         <button
           onClick={handleGenerate}
-          className="w-full py-3 bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl
-                     font-semibold text-sm transition-colors"
+          className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl
+                     font-semibold text-sm transition-all hover:shadow-[0_0_15px_rgba(79,70,229,0.4)] active:scale-95"
         >
           Generate Tailored LaTeX Resume →
         </button>
@@ -157,8 +156,8 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
 
       {/* Left: editable LaTeX source */}
       <div className="flex-1 flex flex-col border-r border-[#1e1e24] min-w-0">
-        <div className="flex items-center justify-between px-4 py-2.5
-                        border-b border-[#1e1e24] bg-[#0d0d0f] flex-shrink-0">
+        <div className="flex items-center justify-between px-4 py-3
+                        border-b border-white/5 bg-[#09090b]/70 backdrop-blur-md flex-shrink-0">
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono text-[#555]">resume.tex</span>
             <span
@@ -180,8 +179,8 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
         </div>
 
         <textarea
-          className="flex-1 bg-[#080810] p-4 text-xs font-mono text-[#7ec8a0]
-                     resize-none focus:outline-none leading-relaxed"
+          className="flex-1 bg-transparent p-4 text-xs font-mono text-[#7ec8a0]
+                     resize-none focus:outline-none leading-relaxed selection:bg-[#7ec8a0]/30"
           value={result.latex}
           onChange={e => setResult({ ...result, latex: e.target.value })}
           spellCheck={false}
@@ -189,26 +188,26 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
       </div>
 
       {/* Right: actions + metadata */}
-      <div className="w-72 flex-shrink-0 flex flex-col bg-[#0d0d0f] overflow-y-auto">
+      <div className="w-72 flex-shrink-0 flex flex-col bg-white/[0.02] border-l border-white/5 backdrop-blur-md overflow-y-auto">
 
         {/* Download actions */}
-        <div className="p-4 border-b border-[#1e1e24]">
+        <div className="p-4 border-b border-white/5">
           <p className="text-[10px] text-[#444] uppercase tracking-wider font-semibold mb-3">
             Download
           </p>
 
           <button
             onClick={() => downloadLatex(result.latex, result.meta.role_family)}
-            className="w-full py-2 border border-[#2d2d38] hover:border-[#4ade80]
-                       hover:text-[#4ade80] rounded-lg text-xs mb-2 transition-colors text-[#888]"
+            className="w-full py-2.5 border border-white/10 hover:border-[#4ade80]/50 hover:bg-[#4ade80]/10
+                       hover:text-[#4ade80] rounded-lg text-xs mb-3 transition-all active:scale-95 text-[#888]"
           >
             ↓ Download .tex file
           </button>
 
           <button
             onClick={() => openOverleaf(result.latex)}
-            className="w-full py-2 bg-[#238636] hover:bg-[#2ea043] rounded-lg
-                       text-xs font-semibold transition-colors"
+            className="w-full py-2.5 bg-green-700 hover:bg-green-600 rounded-lg
+                       text-xs font-semibold transition-all hover:shadow-[0_0_10px_rgba(21,128,61,0.5)] active:scale-95 text-white"
           >
             Open in Overleaf → PDF
           </button>
@@ -220,7 +219,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
 
         {/* Keywords matched */}
         {result.meta.keywords?.length > 0 && (
-          <div className="p-4 border-b border-[#1e1e24]">
+          <div className="p-4 border-b border-white/5">
             <p className="text-[10px] text-[#444] uppercase tracking-wider font-semibold mb-2">
               JD Keywords Matched
             </p>
@@ -238,7 +237,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
         )}
 
         {/* Overleaf guide */}
-        <div className="p-4 border-b border-[#1e1e24]">
+        <div className="p-4 border-b border-white/5">
           <p className="text-[10px] text-[#444] uppercase tracking-wider font-semibold mb-2">
             Overleaf Steps (30 sec)
           </p>
@@ -257,18 +256,18 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
         </div>
 
         {/* Regenerate + Apply */}
-        <div className="p-4 space-y-2">
+        <div className="p-4 space-y-3">
           <button
             onClick={() => setState("generate")}
-            className="w-full py-2 border border-[#2d2d38] hover:border-[#444]
-                       rounded-lg text-xs text-[#666] transition-colors"
+            className="w-full py-2.5 border border-white/10 hover:border-white/20 hover:bg-white/5
+                       rounded-lg text-xs text-[#888] transition-all active:scale-95"
           >
             ↻ Regenerate
           </button>
           <button
             onClick={onMarkApplied}
-            className="w-full py-2 border border-[#2d2d38] hover:border-[#4ade80]
-                       hover:text-[#4ade80] rounded-lg text-xs text-[#555] transition-colors"
+            className="w-full py-2.5 border border-white/10 hover:border-[#4ade80]/50 hover:bg-[#4ade80]/10
+                       hover:text-[#4ade80] rounded-lg text-xs text-[#555] transition-all active:scale-95"
           >
             ✓ Mark as Applied
           </button>
