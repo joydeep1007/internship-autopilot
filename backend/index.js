@@ -276,7 +276,7 @@ RULES:
 `;
 
     const message = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
+      model: "qwen/qwen3.6-27b",
       max_tokens: 500,
       temperature: 0.7,
       messages: [{ role: "user", content: prompt }],
