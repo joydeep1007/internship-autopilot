@@ -336,6 +336,52 @@
     "applied": false
   },
   {
+    "score": 95,
+    "role_family": "mern",
+    "reason": "The candidate's hands-on project experience in full-stack web development using React, Node.js, Express, and REST APIs perfectly matches all key requirements for this internship.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "Cubeaisolutuions Tech pvt Ltd",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=fab00d17a02e5d16",
+    "description": "**Job Overview**\n\nWe are looking for a **Full Stack Developer Intern** who is passionate about building real world web applications and is willing to work across both frontend and backend development.\n\nThe ideal candidate should have a good understanding of web development fundamentals and, preferably, hands\\-on experience through academic, personal, or professional projects.\n\nThis is a 3\\-month, in\\-office internship with an opportunity for full\\-time employment based on performance.\n\n**Key Responsibilities**\n\n* Develop and maintain frontend and backend components of web applications.\n* Build responsive and user\\-friendly web interfaces.\n* Develop APIs and integrate frontend applications with backend services.\n* Work with databases and perform basic database operations.\n* Debug, test, and",
+    "date_posted": "2026-08-17",
+    "id": "in-fab00d17a02e5d16",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:22.583109+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 94,
+    "role_family": "mern",
+    "reason": "The candidate has excellent alignment with full-stack Node.js development and proven experience integrating AI APIs like Gemini and OpenAI into web applications.",
+    "key_skills": [
+      "Node.js",
+      "React.js",
+      "LLM APIs (OpenAI/Gemini)"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Node.js Developer (AI Focus)",
+    "company": "Dialabank.com",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=bc6711d0871cf9ea",
+    "description": "**Title : Node.js Developer Intern (AI\\-Focused)**\n\n**About the Role**\n\nWe're looking for a passionate **Node.js Developer Intern** who enjoys building modern web applications and exploring AI\\-powered development. If you love creating projects, experimenting with AI tools, and continuously learning new technologies, we'd love to hear from you.\n\n**What You'll Do**\n\n* Develop and maintain full\\-stack web applications.\n* Build responsive user interfaces using modern frontend frameworks.\n* Design RESTful APIs and integrate third\\-party services.\n* Leverage AI tools like **ChatGPT, GitHub Copilot, Cursor, and Claude Code** to write, debug, and optimize code.\n* Build AI\\-powered features such as chatbots, automation tools, intelligent dashboards, and semantic search.\n* Debug, test, and optimize",
+    "date_posted": "2026-08-17",
+    "id": "in-bc6711d0871cf9ea",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:55.186809+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 92,
     "role_family": "swe",
     "reason": "The candidate's versatile full-stack project background and strong fundamental CS skills make them an ideal fit for a generalist Junior Software Engineer intern role.",
@@ -401,6 +447,52 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-17T03:09:06.983241+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "The candidate's strong backend experience with Node.js, Express.js, and a full-stack MERN project perfectly aligns with this Node.js intern requirement.",
+    "key_skills": [
+      "Node.js",
+      "Express.js",
+      "JavaScript"
+    ],
+    "estimated_stipend": "\u20b910,000-15,000/month",
+    "title": "Node.js Developer Intern",
+    "company": "Unikwork",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=8ec8d532311be2d3",
+    "description": "**Node.js Developer Intern**\n----------------------------\n\n\n#### **Qualification**\n\n\nBE (CSE/IT)/ B.TECH(CSE/IT)/ MCA/ ME(CSE/IT)/ M.SC/ M.TECH(CSE/IT)\n\n\n#### **Location**\n\n\nSurat\n\n\n#### **Salary range**\n\n\n#### **Experience/Seniority level**\n\n\nFresher\n\n\n#### **Job Time**\n\n\nFull Time\n\n\n#### **Requirements / Your Skills**\n\n\nDesign, build and implement applications based on specification\n\n\nWorking with different stackholders to ensure successful software release\n\n\nGood understanding of object\\-oriented programming, algorithms, and data structures",
+    "date_posted": "2026-08-17",
+    "id": "in-8ec8d532311be2d3",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:53.323704+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "The candidate's strong background in React.js, JavaScript, Node.js, and Vercel perfectly aligns with all technical requirements of this internship.",
+    "key_skills": [
+      "React.js",
+      "JavaScript",
+      "Node.js"
+    ],
+    "estimated_stipend": "\u20b910,000/month",
+    "title": "Frontend Developer - Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=126b70700ed74784",
+    "description": "**Frontend Developer \\- Intern**\n\nWork Mode: Hybrid\n\nWorking Days: 5 days a week\n\nStipend: \u20b910,000 per month\n\nLaptop: Own laptop required\n\nVideo Meetings: Comfortable participating in regular online meetings\n\nWe are looking for a Frontend Developer Intern who is interested in web development and excited to learn by working on real projects. You will work with our development team to build and improve websites and web applications while gaining hands\\-on experience with modern frontend technologies, Node.js, Vercel, and Figma.\n\n**Key Responsibilities**\n\n* Help develop and maintain websites and web applications.\n* Convert Figma designs into responsive and user\\-friendly web pages.\n* Write and update code using HTML, CSS, and JavaScript.\n* Work with React.js or other frontend technologies use",
+    "date_posted": "2026-08-17",
+    "id": "in-126b70700ed74784",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:11.878644+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -543,6 +635,31 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-14T04:23:47.123375+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 90,
+    "role_family": "aiml",
+    "reason": "The candidate has demonstrated strong practical application of AI/ML through projects involving computer vision, neural networks, and LLM API integrations, perfectly aligning with the job requirements.",
+    "key_skills": [
+      "OpenCV",
+      "NumPy",
+      "CNN",
+      "Gemini API",
+      "FastAPI"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "AI/ML Developer Intern",
+    "company": "Cubeaisolutuions Tech pvt Ltd",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=ef1f8e12684c0f9f",
+    "description": "**Job Overview**\n\nWe are looking for an enthusiastic **AI/ML Developer Intern** who is interested in building and implementing real\\-world Artificial Intelligence and Machine Learning solutions.\n\nThe ideal candidate should have a strong interest in AI/ML and preferably have hands\\-on experience through academic, personal, research, or other relevant projects.\n\nThis is a 3\\-month, in\\-office internship with an opportunity for full\\-time employment based on performance.\n\n**Key Responsibilities**\n\n* Assist in developing and implementing AI/ML solutions for real\\-world projects.\n* Work with datasets for data preprocessing, analysis, and model development.\n* Develop, test, and evaluate Machine Learning models.\n* Explore and implement appropriate AI/ML algorithms based on project requirements.\n*",
+    "date_posted": "2026-08-17",
+    "id": "in-ef1f8e12684c0f9f",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:28.332945+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -718,6 +835,30 @@
     "applied": false
   },
   {
+    "score": 85,
+    "role_family": "aiml",
+    "reason": "The candidate has a strong background in Python and data-heavy projects, making them highly overqualified for a basic scraping internship.",
+    "key_skills": [
+      "Python",
+      "OpenCV",
+      "NumPy",
+      "Data Scraping"
+    ],
+    "estimated_stipend": "\u20b94,000/month",
+    "title": "Ai/Ml Data Scraping Intern",
+    "company": "Venture Builders",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b0bf7cbf4fc32e79",
+    "description": "Job description:\n\nAI/ML \\& Data Scraping Intern\n\nDuration: 2 Months\n\nStipend: \u20b94,000 fixed per month\n\nWork Mode: Remote\n\nAbout the Role\n\nWe are looking for a motivated AI/ML \\& Data Scraping Intern to assist our team with data collection, web scraping, data cleaning, and basic machine\\-learning\\-related tasks. This is a hands\\-on opportunity for someone interested in AI, ML, Python, and working with real\\-world datasets.\n\nKey Responsibilities\n\nData scraping and cleaning\n\nWorking with large datasets\n\nFinding efficient ways to extract/download data from different URLs\n\nCleaning, organizing, and structuring the collected data\n\nRequired skills:\n\nPython and Java\n\nStrong understanding of data handling and scraping\n\nFamiliarity with building automation systems is preferred.\n\n\\- Basic knowledge of",
+    "date_posted": "2026-08-17",
+    "id": "in-b0bf7cbf4fc32e79",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:29.082488+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 82,
     "role_family": "python",
     "reason": "The candidate is overqualified with strong Python, API, and web development skills that easily cover all basic requirements of this internship.",
@@ -815,6 +956,52 @@
     "applied": false
   },
   {
+    "score": 75,
+    "role_family": "swe",
+    "reason": "The candidate possesses strong Java fundamentals and backend REST API experience required for this training-focused Spring Boot internship, though direct Spring Boot framework projects are missing.",
+    "key_skills": [
+      "Java",
+      "Spring Boot",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b95,000-15,000/month",
+    "title": "Spring Boot Developer Intern",
+    "company": "Make A Try Software Solutions LLP",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=eb10f8c87006d4fd",
+    "description": "**Make A Try Software Solutions LLP is seeking a motivated Spring Boot Development InternJob Summary**\n\nWe are looking for a candidate who is interested in learning and working on **backend web development using Spring Boot**. The intern will be trained in backend development and will work on real\\-time web applications under guidance.\n\n**Key Responsibilities**\n\n* Develop and maintain backend services using **Spring Boot**\n* Write clean and structured code using **Java**\n* Build RESTful APIs for web applications\n* Integrate databases with backend applications\n* Assist in debugging and improving application performance\n* Work on assigned tasks and mini backend projects\n* Collaborate with team members on development activities\n\n**Required Skills**\n\n* Basic knowledge of **Java**\n* Basic under",
+    "date_posted": "2026-08-17",
+    "id": "in-eb10f8c87006d4fd",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:00.951281+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 75,
+    "role_family": "mern",
+    "reason": "The candidate has strong React, TypeScript, and full-stack backend experience matching the web developer requirements, though explicit Next.js framework experience is not mentioned.",
+    "key_skills": [
+      "React.js",
+      "TypeScript",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b93,000 - \u20b910,000/month",
+    "title": "Internship Opportunities Next.js Developer & Flutter Developer",
+    "company": "Solution Cone",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=8819f209512db18c",
+    "description": "**Next.js Developer Intern**\n\n* Basic to intermediate knowledge of Next.js, React.js, JavaScript/TypeScript\n* Understanding of responsive web design\n* Familiarity with API integration\n\n**2\\. Flutter Developer Intern**\n\n* Basic knowledge of Flutter and Dart\n* Understanding of mobile app development concepts\n* Experience with API integration is a plus\n\nPreferred Skills\n\n* Knowledge of both **Frontend and Backend Development**\n* Understanding of databases and REST APIs\n* Problem\\-solving mindset and willingness to learn\n* Ability to work independently and as part of a team\n\nInternship Details\n\n* **Duration:** \\[Specify Duration]\n* **Mode:** Remote / On\\-site / Hybrid\n* **Stipend:** \u20b93,000 \u2013 \u20b910,000 per month\n* Stipend will be based on skills, performance, contribution, and working hours.\n* Op",
+    "date_posted": "2026-08-17",
+    "id": "in-8819f209512db18c",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:26.074241+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 72,
     "role_family": "mern",
     "reason": "The candidate has strong React.js, JavaScript, and TypeScript foundations that translate well to React Native, though explicit mobile development experience is missing.",
@@ -834,6 +1021,100 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-17T03:09:06.221126+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 70,
+    "role_family": "swe",
+    "reason": "The candidate strongly matches the web development core (TypeScript, JavaScript, REST APIs, SQL, Git), but lacks experience with the specific C#/.NET and Angular stack mentioned.",
+    "key_skills": [
+      "TypeScript",
+      "JavaScript",
+      "REST APIs",
+      "SQL",
+      "Git"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Web Application Development - Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=be2baa2faa3fe141",
+    "description": "What You'll Do\n\n* Work on real features for the our application\n* Develop and improve frontend and backend functionality\n* Collaborate with the development team\n* Build and integrate APIs\n* Work with databases and application data\n* Debug, test, and improve existing features\n* Participate in discussions, planning, and code reviews\n* Learn modern software development practices\n\nSkills We're Looking For\n\nWe're looking for candidates with an interest or basic knowledge in:\n\n* C\\# / .NET\n* Angular\n* HTML, CSS, and JavaScript / TypeScript\n* SQL and Databases\n* REST APIs\n* Git and GitHub\n\n**Don't worry if you don't know everything.** We value curiosity, problem\\-solving, willingness to learn, and the ability to grow with the team.\n\nWho Can Apply?\n\n* Students pursuing a degree in Computer Science",
+    "date_posted": "2026-08-17",
+    "id": "in-be2baa2faa3fe141",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:58.389556+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 70,
+    "role_family": "mern",
+    "reason": "The candidate easily meets all basic HTML, CSS, and JavaScript requirements, but is significantly overqualified given their advanced full-stack React/Node and AI project background.",
+    "key_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "estimated_stipend": "\u20b93,000-8,000/month",
+    "title": "Web Developer Intern",
+    "company": "Make A Try Software Solutions LLP",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=820bae21329a077a",
+    "description": "Make A Try Software Solutions LLP is seeking a motivated Web Development Intern.\n\n**Job Summary:**\n\nWe are looking for a candidate who is interested in learning and working on web development projects. The intern will be trained in front\\-end development and will work on real\\-time web applications under guidance.\n\n**Key Responsibilities:**\n\nDevelop and maintain responsive web pages  \nWrite clean and structured HTML, CSS, and JavaScript code  \nEnsure websites are mobile\\-friendly  \nAssist in debugging and improving website performance  \nWork on assigned tasks and mini projects  \nCollaborate with team members on project activities\n\n**Required Skills:**\n\nBasic knowledge of HTML and CSS  \nUnderstanding of JavaScript fundamentals  \nInterest in web development  \nBasic problem\\-solving skills  \n",
+    "date_posted": "2026-08-17",
+    "id": "in-820bae21329a077a",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:59.361655+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 68,
+    "role_family": "swe",
+    "reason": "The candidate possesses strong general CS fundamentals and C language knowledge, but the role focuses on low-footprint endpoint security agents which heavily favor systems programming and security concepts.",
+    "key_skills": [
+      "C",
+      "Python",
+      "Docker"
+    ],
+    "estimated_stipend": "\u20b935,000-50,000/month",
+    "title": "Software Engineer",
+    "company": "Qualys",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=0cdd1a5c416039c3",
+    "description": "Come work at a place where innovation and teamwork come together to support the most exciting missions in the world!\n\n**Company Profile:**\n\n\nQualys Cloud Agent enables instant Global visibility of IT assets \u2013 even occasionally connected mobile and virtual devices, with up\\-to\\-date asset configuration data for security and compliance. A low foot\\-print agent installed on endpoints, Cloud Agent brings high performance functionality of all Qualys Cloud Platform services to all IT assets in the global enterprise.\n\n  \n\nCloud agent is one of the pivotal components in Qualys cloud security infrastructure. It is light\\-weight, multi\\-platform, easy to configure and self\\-managed. It helps organization inventory and scan millions of IT assets from a security standpoint. Cloud Agent is a foundation",
+    "date_posted": "2026-08-17",
+    "id": "in-0cdd1a5c416039c3",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:57.324544+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 68,
+    "role_family": "mern",
+    "reason": "The candidate easily satisfies the basic web development requirements with advanced full-stack experience, though the role offers limited technical challenge for their skillset.",
+    "key_skills": [
+      "HTML/CSS",
+      "JavaScript",
+      "Responsive Web Design"
+    ],
+    "estimated_stipend": "\u20b95,000-12,000/month",
+    "title": "Web Developer Intern",
+    "company": "TRENDZUP MEDIA CREATIONS PVT LTD",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=e50bfe987a999b05",
+    "description": "About the Role\n\nWe are looking for a motivated and enthusiastic Web Developer Intern to join our team. This internship provides an excellent opportunity to gain hands\\-on experience in designing, developing, and maintaining web applications while working alongside experienced developers.\n\nResponsibilities\n\n* Assist in developing and maintaining responsive websites and web applications.\n* Write clean, efficient, and well\\-documented code.\n* Collaborate with designers and developers to implement new features.\n* Test and debug applications to ensure optimal performance.\n* Optimize websites for speed, usability, and cross\\-browser compatibility.\n* Participate in code reviews and team meetings.\n* Learn and apply modern web development best practices.\n\nRequired Skills\n\n* Basic knowledge of HTML,",
+    "date_posted": "2026-08-17",
+    "id": "in-e50bfe987a999b05",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:26.855685+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -909,6 +1190,53 @@
     "applied": false
   },
   {
+    "score": 65,
+    "role_family": "swe",
+    "reason": "Strong stack alignment with Python and React, but the role requires 2\u20133 years of full-time experience whereas the candidate is a fresher.",
+    "key_skills": [
+      "Python",
+      "React.js",
+      "REST APIs"
+    ],
+    "estimated_stipend": "Unknown",
+    "title": "Full Stack Developer",
+    "company": "Full Creative",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=20979a31e70a9550",
+    "description": "As a Software Engineer at FULL, you will build and scale the products that keep our customers connected \u2014 cloud telephony and messaging services, and the web experiences on top of them. You will work across the stack: Python services on Google Cloud that handle calls, SMS and scheduled reminders, and React micro\\-frontends that power our phone and conversation experiences.\n\n\nThis is a hands\\-on role for someone with 2\u20133 years of experience who is ready to own features end\\-to\\-end \u2014 from design discussion to production rollout \u2014 with the support of a senior team that will help you ramp up on the domain, the codebase and our engineering practices.\n\n\nWe are an AI\\-forward engineering team: agentic coding tools are part of how we work every day. We expect you to use them well, and to bring th",
+    "date_posted": "2026-08-17",
+    "id": "in-20979a31e70a9550",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:54.299467+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 65,
+    "role_family": "aiml",
+    "reason": "The candidate has strong AI/API integration and Python skills, but lacks specific experience with hardware, audio processing, and embedded systems required for this role.",
+    "key_skills": [
+      "Python",
+      "AI/ML",
+      "FastAPI",
+      "OpenCV"
+    ],
+    "estimated_stipend": "\u20b920,000-35,000/month",
+    "title": "AI Engineering Intern \u2013 Hardware & Voice AI",
+    "company": "KIT Intellect Pvt Ltd",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=faf5d7ac225c6ac9",
+    "description": "About the Role\n\nWe are looking for an enthusiastic **AI Engineering Intern** who is interested in building AI\\-powered systems that interact with the physical world. The ideal candidate should have an interest in **hardware integration, microphones, speakers, voice interfaces, and AI systems**.\n\nKey Responsibilities\n\n* Assist in developing and testing **AI\\-powered voice applications**\n* Work with **microphones, speakers, audio devices, and embedded hardware**\n* Integrate hardware components with AI/ML systems\n* Work with **speech\\-to\\-text (STT), text\\-to\\-speech (TTS), and voice assistants**\n* Test audio input/output and troubleshoot hardware\\-related issues\n* Assist with AI model and API integration\n* Develop prototypes combining **AI \\+ hardware**\n* Conduct testing, debugging, and perf",
+    "date_posted": "2026-08-17",
+    "id": "in-faf5d7ac225c6ac9",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:29.823961+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 60,
     "role_family": "swe",
     "reason": "The candidate is technically overqualified for this basic intern role, but the full-time on-site requirement in Ludhiana presents a major location conflict for a Kolkata-based student.",
@@ -928,6 +1256,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-14T04:23:21.172446+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 60,
+    "role_family": "mern",
+    "reason": "The candidate significantly exceeds the basic frontend skill requirements, but the entry-level trainee role in Indore represents a mismatch for their advanced full-stack capabilities and location.",
+    "key_skills": [
+      "React.js",
+      "JavaScript",
+      "Git"
+    ],
+    "estimated_stipend": "\u20b95,000-10,000/month",
+    "title": "Front-end Developer Intern / Trainee",
+    "company": "Coderwing",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=e109e6c8e4979f77",
+    "description": "**Front\\-End Developer Intern/Trainee**\n\n**Title:** Front\\-End Developer Intern/Trainee\n\n**Job Type:** Internship / Training\n\n**Location:** Indore (On\\-site)\n\nCoderWing is looking for enthusiastic **Front\\-End Developer Interns/Trainees** who are passionate about building responsive and user\\-friendly websites. This opportunity is ideal for freshers, students, and recent graduates looking to gain practical experience on real\\-world projects under industry mentorship.\n\n**Required Skills**\n\n* Basic knowledge of HTML5, CSS3, JavaScript, and Bootstrap.\n* Basic understanding of React.js is a plus.\n* Familiarity with Git is an advantage.\n* Good problem\\-solving and learning attitude.\n* Strong communication and teamwork skills.\n\n**Eligibility**\n\n* B.Tech, BCA, MCA, B.Sc (CS/IT), M.Tech, or equiva",
+    "date_posted": "2026-08-17",
+    "id": "in-e109e6c8e4979f77",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:27.575532+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -955,6 +1306,29 @@
     "applied": false
   },
   {
+    "score": 58,
+    "role_family": "other",
+    "reason": "The candidate possesses strong full-stack and API fundamentals suitable for backend integration, but lacks explicit experience with blockchain or smart contracts.",
+    "key_skills": [
+      "Blockchain",
+      "Smart Contracts",
+      "Web3"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Blockchain Developer Intern",
+    "company": "Storygame pvt ltd",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=f90fe74cba6ac898",
+    "description": "**Company:** Storygame Private Limited  \n**Location:** Technopark, Trivandrum, Kerala\n\n**Work mode:** Remote  \n**Internship Period :** 3 Months  \n**Experience:** Fresher / 0\u20131 year\n\n**About Storygame**\n\nStorygame is a technology company building solutions in **Blockchain, Web3, AI Agents, and software development**. Our blockchain engineering work covers areas including smart contracts, DeFi, NFTs, tokenization, decentralized applications, and enterprise blockchain solutions.\n\n**Job Description**\n\nWe are looking for a **Blockchain Developer Intern** to join our engineering team.\n\nThis position is suitable for students or recent graduates who have a genuine interest in blockchain technology and want to gain practical experience working on real\\-world projects.\n\nYou don't need to be an exper",
+    "date_posted": "2026-08-17",
+    "id": "in-f90fe74cba6ac898",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:07:56.270430+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 55,
     "role_family": "other",
     "reason": "The candidate has strong React and JavaScript fundamentals that transfer well to React Native, but lacks explicit mobile development experience and may face logistical challenges with a 6-month onsite requirement in Patna.",
@@ -976,6 +1350,30 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-08-14T04:23:17.290500+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 55,
+    "role_family": "other",
+    "reason": "The candidate possesses strong general programming and API integration skills required for training, but lacks direct experience in Flutter and Dart for mobile development.",
+    "key_skills": [
+      "Flutter",
+      "Dart",
+      "REST APIs",
+      "Mobile Development"
+    ],
+    "estimated_stipend": "\u20b95,000-10,000/month",
+    "title": "Flutter Developer Intern",
+    "company": "Make A Try Software Solutions LLP",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=9cfd98823219d2fc",
+    "description": "Make A Try Software Solutions LLP is seeking a motivated Flutter Development Intern.\n\n**Job Summary:**\n\nWe are looking for a candidate who is interested in learning and working on mobile application development projects. The intern will be trained in Flutter and Dart and will work on real\\-time mobile applications under guidance.\n\n**Key Responsibilities:**\n\nDevelop and maintain mobile applications using Flutter  \nWrite clean and structured Dart code  \nDesign responsive and user\\-friendly UI screens  \nIntegrate APIs into mobile applications  \nAssist in debugging and improving app performance  \nWork on assigned tasks and mini projects  \nCollaborate with team members on project activities\n\n**Required Skills:**\n\nBasic knowledge of programming concepts  \nInterest in mobile app development  \nUnd",
+    "date_posted": "2026-08-17",
+    "id": "in-9cfd98823219d2fc",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-08-18T03:08:00.113599+00:00",
     "resume_generated": false,
     "applied": false
   }
