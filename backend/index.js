@@ -255,7 +255,7 @@ SENDER:
 Name: ${masterResume.personal.name}
 Best project: ${topProject.name} — github.com/joydeep1007 (live projects, real code)
 Skills: React, Node.js, Python, FastAPI, Gemini API, MongoDB
-Currently: B.Tech CSE final year, CGPA 8.11
+Currently: B.Tech CSE final year, CGPA 8.23
 
 TARGET:
 Company: ${job.company}

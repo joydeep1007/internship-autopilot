@@ -65,7 +65,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">Tailor Resume</h1>
           <p className="text-[#666] text-sm">
-            Claude will analyze this JD, pick your best matching projects,
+            Groq will analyze this JD, pick your best matching projects,
             rewrite bullets to mirror the JD's language, and generate a
             LaTeX resume ready for Overleaf.
           </p>
@@ -138,7 +138,7 @@ export default function ResumeTailor({ job, masterResume, onBack, onMarkApplied 
         <h2 className="text-lg font-semibold text-white mb-2">Generation Failed</h2>
         <p className="text-sm text-[#888] mb-2">{error}</p>
         <p className="text-xs text-[#555] mb-6">
-          Check that VITE_ANTHROPIC_KEY is set in your .env file.
+          Check that GROQ_KEY is set in your .env file.
         </p>
         <button
           onClick={() => setState("generate")}
