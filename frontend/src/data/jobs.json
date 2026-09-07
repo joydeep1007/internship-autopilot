@@ -1,5 +1,28 @@
 [
   {
+    "score": 98,
+    "role_family": "python",
+    "reason": "The candidate's stack of React.js, Python, and FastAPI perfectly matches all key requirements and project experience specified in the job description.",
+    "key_skills": [
+      "React.js",
+      "Python",
+      "FastAPI"
+    ],
+    "estimated_stipend": "\u20b95,000-12,000/month",
+    "title": "Full stack intern",
+    "company": "ASCENT E-DIGIT SOLUTIONS PVT LTD",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=96484bab41d90856",
+    "description": "Job Description \u2013 Full Stack Developer Intern (React.js \\+ Python/FastAPI)\n\n**Position:** Full Stack Developer Intern  \n**Experience:** Fresher / Intern  \n**Employment Type:** Internship (Full\\-Time)  \n**Location:** Erode\n\nJob Summary\n\nWe are looking for enthusiastic and passionate Full Stack Developer Interns with knowledge of React.js and Python (FastAPI/Django). This internship offers an excellent opportunity to gain hands\\-on experience in building modern web applications while working alongside experienced developers.\n\nKey Responsibilities\n\n* Assist in developing web applications using React.js and Python (FastAPI/Django).\n* Build responsive and user\\-friendly UI components.\n* Support the development and integration of RESTful APIs.\n* Assist in integrating frontend applications with b",
+    "date_posted": "2026-09-05",
+    "id": "in-96484bab41d90856",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:26.976849+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 95,
     "role_family": "mern",
     "reason": "The candidate's MERN stack proficiency and project experience perfectly align with the core requirements of the job description.",
@@ -790,6 +813,78 @@
     "applied": false
   },
   {
+    "score": 95,
+    "role_family": "swe",
+    "reason": "The candidate's extensive hands-on experience with Node.js, FastAPI, REST APIs, and database management perfectly aligns with all backend intern responsibilities.",
+    "key_skills": [
+      "Node.js",
+      "FastAPI",
+      "REST APIs",
+      "MongoDB"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "Backend Developer Intern",
+    "company": "WeIntern",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=1d811a3bb4dcfc6b",
+    "description": "We are looking for a motivated Backend Developer Intern to join our development team. This opportunity is ideal for freshers who want to gain practical experience in backend development, API development, databases, debugging, and real\\-world software projects.\n\nThe selected candidate will work closely with developers to build, maintain, test, and improve backend applications and services.\n\nKey Responsibilities\n\n* Develop and maintain backend applications and services\n* Build and integrate RESTful APIs\n* Work with databases and perform CRUD operations\n* Write clean, efficient, reusable, and maintainable code\n* Debug and troubleshoot backend issues\n* Implement authentication and authorization where required\n* Integrate third\\-party APIs and services\n* Collaborate with frontend developers and",
+    "date_posted": "2026-09-05",
+    "id": "in-1d811a3bb4dcfc6b",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:22.517900+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 95,
+    "role_family": "mern",
+    "reason": "The candidate significantly exceeds the basic requirements with a proven MERN stack project and extensive frontend/backend skills.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "MongoDB"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "BExO",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=daaf62adb80d15fc",
+    "description": "**Full Job Description:**\n\nBEXO.AI is looking for enthusiastic **Full Stack Developer Interns** who are ready to work on **live client projects** and gain real\\-time industry exposure. This internship is ideal for candidates who want to build strong hands\\-on skills in full stack development.\n\n**Roles \\& Responsibilities:**\n\n* Develop and maintain web applications (Frontend \\+ Backend)\n* Work on **MERN Stack (MongoDB, Express.js, React.js, Node.js)**\n* Collaborate with team members on client projects\n* Debug, test, and optimize applications\n* Learn and implement new technologies\n\n**Required Skills:**\n\n* Basic understanding of **HTML, CSS, JavaScript**\n* Knowledge of **React.js / Node.js** (preferred)\n* Familiarity with **database concepts (MongoDB/MySQL)**\n* Good problem\\-solving skills\n* ",
+    "date_posted": "2026-09-06",
+    "id": "in-daaf62adb80d15fc",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:24.204816+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 95,
+    "role_family": "mern",
+    "reason": "The candidate has demonstrated hands-on experience building a full-stack MERN platform with real-time features, perfectly matching all core requirements for this internship.",
+    "key_skills": [
+      "ReactJS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "MERN Stack Developer Intern",
+    "company": "Gravit InfoSystems Pvt. Ltd.",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b4578d15e5607a76",
+    "description": "**Job description:**\n\nThe ideal candidate is a creative problem solver who will work in coordination with cross\\-functional teams to design, develop, and maintain our next\\-generation websites and web applications. You must be comfortable working as part of a team while taking the initiative to take the lead on innovations and projects.\n\n**Responsibilities**\n\n* Understand Technical Requirements\n* Develop innovative, robust, and scalable web applications\n* Work with cross\\-functionally to enhance the overall user experience of our platforms\n* Own various design tasks involved in the web development life cycle from start to finish\n\n**Key Skills**\n\nExpress.js, ReactJS, Node.js, Angular, HTML 5, Ajax, JQuery, MySQL, Javascript, AngularJS, JSON, Magento, REST API, VueJs, MongoDB\n\n**Knowing AI/M",
+    "date_posted": "2026-09-05",
+    "id": "in-b4578d15e5607a76",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:30.020210+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 92,
     "role_family": "aiml",
     "reason": "The candidate has strong foundational experience in Python, AI/ML libraries, and LLM integrations that align perfectly with the role's focus on AI engineering and agentic software development.",
@@ -1071,6 +1166,52 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-09-04T07:21:42.000178+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "Candidate's strong expertise in React, Node.js, and REST APIs matches the requirements for building React dashboards and backend integrations for this fullstack internship.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b925,000-35,000/month",
+    "title": "Fullstack Developer- Internship",
+    "company": "GreedyGame Media",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=a752a34d5bc6d86e",
+    "description": "Job ID: 402612\n In\\-Office\nBangalore, Karnataka, India\n\n  \n\n0 \\- 1 years\n\n  \n\n\n**Fullstack Engineer Intern**\n\n\n* **Experience**: 0 \\- 1 Years\n* **Company**: GreedyGame / PubScale\n* **Team**: Tech\n* **Location**: Bengaluru Type: Internship\n\n**About GreedyGame / PubScale**\n  \n\nGreedyGame (PubScale) is a Bengaluru\\-based, Google Certified Publishing Partner building an all\\-in\\-one platform for app growth and monetization, trusted by 1500\\+ publishers and advertisers worldwide. Our products span native and immersive ad formats, mediation, user acquisition (GROW), and offerwalls.\n\n\n**What You'll Do**  \n\n* Build and maintain backend services that integrate with Google Ad Manager (GAM) and multiple third\\-party ad networks\n* Develop frontend features and dashboards in React used by both publishe",
+    "date_posted": "2026-09-05",
+    "id": "in-a752a34d5bc6d86e",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:24.704362+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 92,
+    "role_family": "mern",
+    "reason": "The candidate has strong React.js and full-stack MERN skills that perfectly match both the front-end title and the server/database responsibilities outlined in the job description.",
+    "key_skills": [
+      "React.js",
+      "JavaScript",
+      "Node.js"
+    ],
+    "estimated_stipend": "\u20b95,000-15,000/month",
+    "title": "Front End Web Developer Intern",
+    "company": "Ideamagix",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=59c973b5195c09bc",
+    "description": "**We at Ideamagix, are looking for a qualified candidate to join our Web Development team for Indian as well as International markets who can actively participate in various stages of Web Development.**\n\n\\* Work with front\\-end developers and provide server\\-side algorithms of user\\-facing web application elements.  \n\\* Code and create functional web applications, optimize code for increasing response time and efficiency.  \n\\* Analyze the goals and requirements, handle bugs and errors, and come up with solutions.  \n\\* Interact with the database for storing data and ensure that every user has access to what they search.\\* Accomplish the projects and goals in time.  \n\\* Manage APIs that are executed across the devices.  \n\\* Involve in defining the architecture of the system.\n\nRequired skills",
+    "date_posted": "2026-09-07",
+    "id": "in-59c973b5195c09bc",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:32.617139+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -1534,6 +1675,31 @@
     "applied": false
   },
   {
+    "score": 90,
+    "role_family": "aiml",
+    "reason": "The candidate has strong practical experience in GenAI APIs, OpenCV, CNNs, and fundamental deep learning, making them an excellent fit for this AI/ML internship.",
+    "key_skills": [
+      "Python",
+      "Generative AI",
+      "Computer Vision",
+      "Deep Learning",
+      "NumPy"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "AI/ML Intern",
+    "company": "BExO",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=057db6e50b23fa5a",
+    "description": "AI/ML Internship (2 Months) \u2013 BEXO.AI \\| Mohali (On\\-site)\n\n**Job Title:** AI/ML Intern  \n**Location:** Mohali, Punjab  \n**Duration:** 2 Months  \n**Job Type:** Internship (On\\-site)\n\nAbout BEXO.AI\n\nBEXO.AI is a technology\\-driven company focused on building innovative AI\\-powered solutions. We are looking for enthusiastic students and fresh graduates who are eager to gain practical experience in Artificial Intelligence and Machine Learning by working on real\\-world projects under the guidance of experienced mentors.\n\nWhat You'll Learn\n\n* Machine Learning fundamentals and model development\n* Deep Learning concepts and neural networks\n* Generative AI and Large Language Models (LLMs)\n* Natural Language Processing (NLP)\n* Computer Vision basics\n* Data preprocessing and feature engineering\n* Mo",
+    "date_posted": "2026-09-05",
+    "id": "in-057db6e50b23fa5a",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:39.794945+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 88,
     "role_family": "mern",
     "reason": "The candidate has strong experience with React, Node.js, TypeScript, and Supabase, missing only explicit Next.js project experience.",
@@ -1648,6 +1814,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-09-03T07:18:21.469880+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 88,
+    "role_family": "mern",
+    "reason": "The candidate's expertise in JavaScript, TypeScript, React, and Node.js perfectly aligns with the full-stack developer intern requirements.",
+    "key_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React.js"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "Full Stack Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b51e6f9ad583ac16",
+    "description": "IT Intern \u2013 Full Stack Developer\n\n**Company:** Uvix Technologies  \n**Website:** uvix.in  \n**Location:** Bangalore  \n**Work Mode:** In\\-person  \n**Duration:** 6 Months\n\n**Stipend:** As per company policy\n\nAbout the Role\n\nWe are looking for a motivated **IT Intern / Full Stack Developer Intern** to join our technology team and gain hands\\-on experience working on real\\-world web applications and software projects.\n\nKey Responsibilities\n\n* Assist in developing and maintaining web applications.\n* Work on frontend, backend, APIs, and database integration.\n* Debug, test, and troubleshoot applications.\n* Collaborate with the development team on real\\-world projects.\n* Learn and implement modern web development technologies.\n\nRequired Skills\n\n* Basic knowledge of **JavaScript / TypeScript**.\n* **R",
+    "date_posted": "2026-09-05",
+    "id": "in-b51e6f9ad583ac16",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:19.920431+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -2285,6 +2474,29 @@
     "applied": false
   },
   {
+    "score": 78,
+    "role_family": "swe",
+    "reason": "Strong match with TypeScript, PostgreSQL, and Docker, though lacks direct experience with Go and AWS.",
+    "key_skills": [
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "Workwise",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b0f3617ff2972d35",
+    "description": "We're looking for Full\\-Stack Developers Intern to join our engineering team building a SaaS product. You'll work across the entire stack. building features end\\-to\\-end, writing clean APIs, crafting responsive UIs, and deploying to AWS.\n\n**Tech Stack**\n\n* Backend: Go Lang, PostgreSQL, REST APIs\n* Frontend: Next.js, TypeScript, Bootstrap\n* Infrastructure: AWS (S3, Lambda, EventBridge), Docker, GitHub Actions\n\n**What You'll Do**\n\n* Build and ship features across frontend and backend\n* Design and implement RESTful APIs with proper validation and error handling\n* Write clean, maintainable, well\\-tested code\n* Participate in code reviews and collaborate with the team\n* Work with AWS services (S3, Lambda) for file storage, serverless functions, and scheduled tasks\n* Debug production issues usin",
+    "date_posted": "2026-09-05",
+    "id": "in-b0f3617ff2972d35",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:25.536551+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 75,
     "role_family": "mern",
     "reason": "The candidate's strong full-stack and frontend skills in React, JavaScript, and Node.js closely align with the Web Developer Intern role requirements.",
@@ -2730,6 +2942,29 @@
     "applied": false
   },
   {
+    "score": 65,
+    "role_family": "mern",
+    "reason": "The candidate has strong React and JavaScript skills, but the basic HTML/WordPress scope and mandatory on-site location in Ahmedabad pose a mismatch for a Kolkata-based student.",
+    "key_skills": [
+      "JavaScript",
+      "HTML/CSS",
+      "React.js"
+    ],
+    "estimated_stipend": "\u20b95,000-12,000/month",
+    "title": "Frontend Developer Intern (Freshers Only)",
+    "company": "Travel On Tips",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=dec05ca8199cb490",
+    "description": "**Frontend Developer Intern (Freshers Only)**\n\n**Job Type**\n\nInternship (Full\\-Time)\n\n**Location**\n\nAhmedabad, Gujarat (Work from Office)\n\n**Duration**\n\n3 to 6 Months\n\n**About the Internship**\n\nWe are looking for enthusiastic and passionate **Frontend Developer Interns** who are eager to start their career in web development. This internship is an excellent opportunity for freshers to gain real\\-world experience by working on live websites and modern frontend technologies.\n\nNo professional experience is required. If you have basic knowledge of HTML, CSS, JavaScript, or WordPress and are willing to learn, we encourage you to apply.\n\n**Responsibilities**\n\n* Develop responsive and mobile\\-friendly web pages.\n* Convert UI/UX designs into functional web pages.\n* Build and maintain websites usin",
+    "date_posted": "2026-09-07",
+    "id": "in-dec05ca8199cb490",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:33.441507+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 62,
     "role_family": "other",
     "reason": "The candidate has strong React.js, JavaScript, and Java foundations suitable for learning React Native and Android development quickly, though explicit mobile framework experience is missing.",
@@ -2796,6 +3031,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-09-03T07:18:16.566768+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 55,
+    "role_family": "swe",
+    "reason": "Candidate has strong backend skills in Node.js and Python, but the low stipend and mandatory on-site location in Indore present significant drawbacks.",
+    "key_skills": [
+      "Node.js",
+      "FastAPI",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b95,000-7,000/month",
+    "title": "Backend Developer Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c7dc5af34b735659",
+    "description": "**Position: Backend Developer Intern**\n\n**Company:** Invenlogic Software Pvt. Ltd.  \n**Location:** Indore, Madhya Pradesh  \n**Internship Duration:** 6 Months  \n**Stipend:** \u20b95,000\\-7000 per month  \n**Work Mode:** On\\-site\n\n**About the Role**\n\nWe are looking for a motivated and enthusiastic **Backend Developer Intern** to join our development team. This internship is an opportunity for students/recent graduates to gain **hands\\-on experience in backend development** by working on real\\-world projects and modern technologies.\n\nThe ideal candidate should have a basic understanding of backend programming and databases, along with a strong willingness to learn and solve technical problems.\n\n**Key Responsibilities**\n\n* Develop and maintain backend applications under the guidance of senior develo",
+    "date_posted": "2026-09-05",
+    "id": "in-c7dc5af34b735659",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-09-07T07:19:12.812831+00:00",
     "resume_generated": false,
     "applied": false
   }
