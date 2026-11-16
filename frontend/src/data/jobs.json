@@ -23,6 +23,31 @@
     "applied": false
   },
   {
+    "score": 98,
+    "role_family": "mern",
+    "reason": "The candidate has ideal qualifications for this role, with explicit experience in React, Node.js, Express, and MongoDB, alongside a dedicated MERN stack project.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "MERN Stack Developer Intern",
+    "company": "Particle14",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c66a9748bbc53dac",
+    "description": "About the Company\n\nParticle14 Infotech Pvt. Ltd. is a technology\\-driven software development company specializing in web and mobile application development, AI/ML solutions, cybersecurity, and enterprise software solutions.\n\nWe are looking for enthusiastic and motivated MERN Stack Developer Interns who are passionate about programming and eager to gain practical experience by working on real\\-world projects.\n\nRoles \\& Responsibilities\n\n* Develop and maintain web applications using the MERN Stack.\n* Build responsive and user\\-friendly frontend interfaces using React.js.\n* Develop backend APIs and server\\-side applications using Node.js and Express.js.\n* Work with MongoDB for database design, queries, and data management.\n* Integrate REST APIs and third\\-party services.\n* Collaborate with U",
+    "date_posted": "2026-11-16",
+    "id": "in-c66a9748bbc53dac",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-16T09:23:45.677205+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 95,
     "role_family": "mern",
     "reason": "The candidate's MERN stack proficiency and project experience perfectly align with the core requirements of the job description.",
@@ -2395,6 +2420,29 @@
     "applied": false
   },
   {
+    "score": 88,
+    "role_family": "mern",
+    "reason": "The candidate has strong React, TypeScript, and full-stack capabilities with AI API experience that aligns well with an AI-native company seeking a Next.js developer.",
+    "key_skills": [
+      "Next.js",
+      "React.js",
+      "TypeScript"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=153d9290d08d7b00",
+    "description": "**Full Stack Developer Intern (Next.js)**\n\n**Company:** Cybroque Technologies Pvt. Ltd.  \n**Job Type:** Internship  \n**Work Mode:** Remote  \n**Duration:** 3 Months\n\n**About Cybroque**\n\nCybroque Technologies is an AI\\-native company focused on building AI\\-powered products, SaaS platforms, and custom software solutions. We work on real\\-world projects that solve business problems through modern technologies and automation.\n\n**Role Overview**\n\nWe are looking for a motivated Full Stack Developer Intern with a good understanding of web development fundamentals and a strong interest in building modern web applications. The primary focus will be working on Next.js\\-based projects, contributing to both frontend and backend development.\n\nCandidates should have a basic understanding of essential we",
+    "date_posted": "2026-11-16",
+    "id": "in-153d9290d08d7b00",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-16T09:23:46.916347+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 85,
     "role_family": "aiml",
     "reason": "The candidate's project portfolio directly aligns with the role's focus on building and deploying AI pipelines, agents, and production-ready systems.",
@@ -3172,6 +3220,29 @@
     "applied": false
   },
   {
+    "score": 82,
+    "role_family": "aiml",
+    "reason": "Strong alignment with candidate's practical experience using LLM APIs (Gemini, Groq, OpenAI) and Python backends to build AI-assisted automated workflows.",
+    "key_skills": [
+      "Python",
+      "Gemini API",
+      "Process Automation"
+    ],
+    "estimated_stipend": "\u20b915,000-25,000/month",
+    "title": "AI Operations & Automation Intern",
+    "company": "Allo Innoware",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=1bb7067461d14982",
+    "description": "**Company:** Allo Innoware  \n**Location:** Mumbai / Remote  \n**Job Type:** Full\\-time  \n**Reports To:** Founder\n\n**Why We Are Hiring**\n\nAllo Innoware is scaling its ecommerce operations across marketplaces and D2C.\n\nMany processes across ecommerce, operations, customer support, finance, HR and reporting are still dependent on people manually checking data, updating spreadsheets, following up and reporting exceptions.\n\nWe are actively moving these workflows toward AI\\-assisted and automated operations.\n\nThe problem is not lack of tools.\n\nThe problem is converting real business processes into reliable workflows that actually work without constant founder involvement.\n\nWe are looking for someone who can own this.\n\n**Your Core Responsibility**\n\nTake a business process that is currently being d",
+    "date_posted": "2026-11-16",
+    "id": "in-1bb7067461d14982",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-16T09:23:45.173042+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 80,
     "role_family": "mern",
     "reason": "The candidate's strong full-stack web development skills in React, Node.js, and Tailwind CSS align directly with this web developer internship.",
@@ -3214,6 +3285,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-09-02T07:09:57.776279+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 80,
+    "role_family": "aiml",
+    "reason": "Strong skill alignment with Python, AI APIs, and algorithmic trading projects, though location in Vadodara may present a constraint for a Kolkata-based student.",
+    "key_skills": [
+      "Python",
+      "AI Automation",
+      "Algorithmic Trading"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "AI Automation Intern (Vadodara)",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=b98582a232f50ca1",
+    "description": "**About PPS Anantams Corporation Pvt Ltd (Gotri, Vadodara)**\n\nWe run three businesses from one office in Gotri, Vadodara, and we are building in\\-house AI automation across all three:\n\n* PPS Anantams \u2013 Bitumen \\& Roads: supply and trading of bitumen and bitumen products for road projects across India.\n* YUGA PMC \u2013 Plant Consulting (yuga\\-pmc.in): project management for pyrolysis, bio\\-bitumen, PMB/CRMB, emulsion and bitumen plants, from feasibility to commissioning.\n* PACPL \u2013 Algo \\& Indicators (pacplindicators.com): TradingView Pine Script indicators and strategies, Telegram bots, broker\\-API algos and Python dashboards (software and education only).\n\n**About the internship**\n\nWe are taking 2 AI Automation Interns now and will add more, one by one, as our automation grows. This internship",
+    "date_posted": "2026-11-16",
+    "id": "in-b98582a232f50ca1",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-16T09:23:47.418248+00:00",
     "resume_generated": false,
     "applied": false
   },
@@ -3285,6 +3379,29 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-09-07T07:19:25.536551+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 78,
+    "role_family": "swe",
+    "reason": "The candidate has strong JavaScript, TypeScript, and React skills that translate well to Electron.js desktop development, though Electron itself is not explicitly listed.",
+    "key_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React.js"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "Electron developer intern",
+    "company": "Codevern",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c5cc381a831c25e7",
+    "description": "Electron Developer Intern\n\nCompany: Codevern\n\nJob Type: Internship\n\nLocation: Jammu, Jammu \\& Kashmir / Remote\n\nExperience: Fresher / 0\u20131 Year\n\nDuration: 3\u20136 Months\n\nDepartment: Technology / Product Development\n\nAbout Codevern\n\nCodevern is a technology company focused on building modern, scalable digital products and software solutions for businesses and institutions. We work on innovative products that combine intuitive user experiences with robust technology.\n\nWe are looking for a motivated Electron Developer Intern to join our development team and contribute to building cross\\-platform desktop applications.\n\nRole Overview\n\nAs an Electron Developer Intern, you will work closely with our development team to design, develop, test, and improve desktop applications using Electron.js, JavaScr",
+    "date_posted": "2026-11-16",
+    "id": "in-c5cc381a831c25e7",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-16T09:23:46.297715+00:00",
     "resume_generated": false,
     "applied": false
   },
