@@ -1585,6 +1585,53 @@
     "applied": false
   },
   {
+    "score": 95,
+    "role_family": "mern",
+    "reason": "The candidate's project portfolio perfectly aligns with the job's focus on AI-powered SaaS and Full-Stack development using the MERN stack and LLM integrations.",
+    "key_skills": [
+      "React.js",
+      "Node.js",
+      "FastAPI",
+      "AI/ML Integration"
+    ],
+    "estimated_stipend": "\u20b915,000-30,000/month",
+    "title": "Full Stack Developer Intern",
+    "company": "TRINITY EDU RES",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=c423827a3c2587cb",
+    "description": "Junior AI Full\\-Stack Developer \u2013 BOJO AI\n\nExperience: Freshers / 0\u20131 Years\n\nEmployment Type: Full\\-Time\n\nInternship for 6 months \\- based on performance confirmation will be done\n\nAbout the Role\n\nBOJO AI is looking for passionate, creative, and technically capable developers who are interested in building modern, AI\\-powered software products.\n\nYou will get the opportunity to work on real\\-world applications, enterprise\\-level business platforms, AI\\-powered SaaS products, intelligent automation systems, and next\\-generation software solutions.\n\nWe are not expecting candidates to know everything from day one. Instead, we are looking for individuals with strong programming fundamentals, practical development skills, problem\\-solving ability, and the mindset to continuously learn, experimen",
+    "date_posted": "2026-11-26",
+    "id": "in-c423827a3c2587cb",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-26T11:18:59.517950+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
+    "score": 95,
+    "role_family": "mern",
+    "reason": "The candidate's core stack (React, JavaScript, Node.js) perfectly aligns with the requirements, and their portfolio of full-stack projects demonstrates strong proficiency for an internship role.",
+    "key_skills": [
+      "React.js",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "estimated_stipend": "\u20b910,000-20,000/month",
+    "title": "React Developer Intern",
+    "company": "Doctosmart Enterprises PVT LTD",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=a0cfbc3777bb5b1f",
+    "description": "**Job Title:React Developer Intern**\n\n**Location: Calicut Cyberpark**\n\n**Duration: 3 Months**\n\n**About the Company**\n\nDoctosmart Enterprises Pvt Ltd is a Health Tech company.We use technology to make healthcare better and easier for everyone. We are a growing team based at Government Cyberpark, and we are looking for motivated React Developer Intern to join our team.\n\n**Job Summary**\n\nWe are seeking a passionate and enthusiastic React Developer Intern to join our development team. The ideal candidate should have a basic understanding of React.js, JavaScript, and modern web development practices. This internship provides an excellent opportunity to gain hands\\-on experience in building responsive and scalable web applications.\n\n**Key Responsibilities**\n\n\\* Assist in developing and maintaini",
+    "date_posted": "2026-11-26",
+    "id": "in-a0cfbc3777bb5b1f",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-26T11:19:00.591741+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 92,
     "role_family": "mern",
     "reason": "The candidate's core stack in React, Node.js, MongoDB, and Python aligns exceptionally well with all key technical requirements of this full stack internship.",
@@ -3454,6 +3501,29 @@
     "applied": false
   },
   {
+    "score": 90,
+    "role_family": "mern",
+    "reason": "The candidate has strong proficiency in the core stack (React, JavaScript, Tailwind) required for the role, though the stipend offered is significantly below industry standards for this skill level.",
+    "key_skills": [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+    "estimated_stipend": "\u20b95,000-7,000/month",
+    "title": "Front End Developer Intern",
+    "company": "nan",
+    "site": "indeed",
+    "job_url": "https://in.indeed.com/viewjob?jk=1bdaf871c62dc1b2",
+    "description": "**Frontend Developer Intern** (2 Positions)\n\n**Experience:** 0\u20132 Years (Freshers Welcome)  \n**Duration:** 6 Months  \n**Stipend:** \u20b95,000 \u2013 \u20b97,000 per month (For Freshers)  \n**Openings:** 2\n\nJob Description\n\nWe are looking for passionate Frontend Developer Interns who have a strong understanding of HTML, CSS, and JavaScript and are eager to work on real\\-world projects.\n\nResponsibilities\n\n* Develop responsive and user\\-friendly web interfaces.\n* Write clean and maintainable code.\n* Build frontend components using React.js.\n* Work with Tailwind CSS and Next.js.\n* Convert designs into functional web pages.\n* Fix bugs and improve website performance.\n\nRequired Skills\n\n* Strong knowledge of **HTML**, **CSS**, and **JavaScript**.\n* Decent knowledge of **React.js, Tailwind CSS, and Next.js.**\n* U",
+    "date_posted": "2026-11-25",
+    "id": "in-1bdaf871c62dc1b2",
+    "contact_email": "",
+    "email_status": "not_found",
+    "scraped_at": "2026-11-26T11:19:01.262488+00:00",
+    "resume_generated": false,
+    "applied": false
+  },
+  {
     "score": 88,
     "role_family": "mern",
     "reason": "The candidate has strong experience with React, Node.js, TypeScript, and Supabase, missing only explicit Next.js project experience.",
@@ -4727,77 +4797,6 @@
     "contact_email": "",
     "email_status": "not_found",
     "scraped_at": "2026-11-17T10:45:13.019147+00:00",
-    "resume_generated": false,
-    "applied": false
-  },
-  {
-    "score": 85,
-    "role_family": "aiml",
-    "reason": "The candidate's expertise in Python, backend APIs, and LLM integrations (Gemini, Groq, OpenAI) makes them a strong fit for building automated AI workflows.",
-    "key_skills": [
-      "Python",
-      "OpenAI / Gemini API",
-      "FastAPI / Node.js"
-    ],
-    "estimated_stipend": "\u20b915,000-25,000/month",
-    "title": "AI Operations & Automation Intern",
-    "company": "Allo Innoware",
-    "site": "indeed",
-    "job_url": "https://in.indeed.com/viewjob?jk=0d0cacfbe8c7162d",
-    "description": "**Company:** Allo Innoware  \n**Location:** Mumbai / Remote  \n**Job Type:** Full\\-time  \n**Reports To:** Founder\n\n**Why We Are Hiring**\n\nAllo Innoware is scaling its ecommerce operations across marketplaces and D2C.\n\nMany processes across ecommerce, operations, customer support, finance, HR and reporting are still dependent on people manually checking data, updating spreadsheets, following up and reporting exceptions.\n\nWe are actively moving these workflows toward AI\\-assisted and automated operations.\n\nThe problem is not lack of tools.\n\nThe problem is converting real business processes into reliable workflows that actually work without constant founder involvement.\n\nWe are looking for someone who can own this.\n\n**Your Core Responsibility**\n\nTake a business process that is currently being d",
-    "date_posted": "2026-11-18",
-    "id": "in-0d0cacfbe8c7162d",
-    "contact_email": "",
-    "email_status": "not_found",
-    "scraped_at": "2026-11-18T10:21:54.292724+00:00",
-    "resume_generated": false,
-    "applied": false
-  },
-  {
-    "score": 85,
-    "role_family": "mern",
-    "reason": "The candidate's solid proficiency in React, Node.js, Express, and REST APIs perfectly matches the role requirements, though the onsite location in Madurai may pose a geographical challenge.",
-    "key_skills": [
-      "React.js",
-      "Node.js",
-      "Express.js"
-    ],
-    "estimated_stipend": "\u20b95,000-10,000/month",
-    "title": "Full Stack Developer Intern",
-    "company": "Beleaf Technologies",
-    "site": "indeed",
-    "job_url": "https://in.indeed.com/viewjob?jk=f5e00fc858697521",
-    "description": "**Job Description \u2013 Paid Internship (Full Stack Developer)**\n\n**Position:** Full Stack Developer \u2013 Intern  \n**Location:** Onsite (Madurai)  \n**Duration:** 3 Months  \n**Type:** Internship (with Training \\+ Live Project Exposure)\n\n**About the Internship**\n\nBeleaf Technologies is offering a Internship Program for freshers who are passionate about Full Stack Development. This internship provides practical training with live projects, giving candidates the exposure needed to begin a career in software development.\n\n**Roles \\& Responsibilities:**\n\n* Learn and implement concepts of frontend and backend development.\n* Build responsive web applications using HTML, CSS, JavaScript, React.js.\n* Work on backend development using Node.js, Express.js.\n* Understand and apply REST API development \\& integ",
-    "date_posted": "2026-11-18",
-    "id": "in-f5e00fc858697521",
-    "contact_email": "",
-    "email_status": "not_found",
-    "scraped_at": "2026-11-18T10:21:57.217341+00:00",
-    "resume_generated": false,
-    "applied": false
-  },
-  {
-    "score": 85,
-    "role_family": "mern",
-    "reason": "The candidate possesses a strong MERN stack and DevOps background that perfectly aligns with the job requirements, though the stipend is significantly below industry standards for this skill set.",
-    "key_skills": [
-      "React.js",
-      "Node.js",
-      "Docker",
-      "MongoDB",
-      "GitHub Actions"
-    ],
-    "estimated_stipend": "\u20b97,000/month",
-    "title": "Internship in Full Stack Developer & DevOps Engineer",
-    "company": "Research Connect",
-    "site": "indeed",
-    "job_url": "https://in.indeed.com/viewjob?jk=710ec1d5909d0bf1",
-    "description": "Internship Opportunity: Full Stack Developer \\& DevOps Engineer\n\n**Company:** Research Connect  \n**Job Type:** Full\\-Time Internship  \n**Internship Duration:** 6 Months  \n**Location:** Malad West, Mumbai  \n**Work Mode:** Work from Office  \n**Stipend:**\n\n* Graduates: \u20b97,000 per month\n* Postgraduates: \u20b910,000 per month\n\n**Working Hours:** 9 Hours per Day  \n**Shift:** Rotational Shifts  \n**Working Days:** Monday to Saturday\n\n**About the Internship**\n\nResearch Connect is looking for enthusiastic and technically inclined candidates for the position of **Full Stack Developer \\& DevOps Engineer Intern**. This internship offers an opportunity to gain practical exposure to full\\-stack web development, backend technologies, server management, cloud infrastructure, automation and DevOps practices.\n\nT",
-    "date_posted": "2026-11-17",
-    "id": "in-710ec1d5909d0bf1",
-    "contact_email": "",
-    "email_status": "not_found",
-    "scraped_at": "2026-11-18T10:22:02.780718+00:00",
     "resume_generated": false,
     "applied": false
   }
